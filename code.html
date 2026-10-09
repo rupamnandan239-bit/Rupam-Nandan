@@ -1,0 +1,3261 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en" style="">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Rupam Nandan — Printmaker &amp; Graphic Designer</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+  <meta
+    content="Portfolio of Rupam Nandan. Crafting bold ideas into wearable &amp; visual stories: Screen prints, tactile apparel, posters, and custom graphics."
+    name="description">
+  <!-- Google Fonts: Fraunces & DM Sans -->
+  <link href="https://fonts.preconnect" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,600&amp;family=Caveat:wght@600&amp;display=swap"
+    rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@0.344.0"></script>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#F3EEE3',
+            'paper-light': '#FAF7F0',
+            'paper-card': '#FFFFFF',
+            ink: '#17171A',
+            'ink-muted': '#5A5B63',
+            'primary-blue': '#2447D6',
+            'accent-pink': '#FF5C8A',
+            'accent-yellow': '#FFC93C',
+          },
+          fontFamily: {
+            serif: ['Fraunces', 'serif'],
+            sans: ['"DM Sans"', 'sans-serif'],
+            hand: ['Caveat', 'cursive'],
+          },
+          boxShadow: {
+            'stamp': '3px 3px 0 #17171A',
+            'flat': '4px 4px 0 #17171A',
+            'flat-lg': '6px 6px 0 #17171A',
+            'flat-xl': '8px 8px 0 #17171A',
+            'flat-hover': '6px 6px 0 #17171A',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Paper Texture Grain Filter */
+    .bg-paper-noise {
+      background-color: #F3EEE3;
+      background-image: radial-gradient(rgba(23, 23, 26, 0.04) 1px, transparent 0);
+      background-size: 20px 20px;
+    }
+
+    /* Print Press button / card hover transitions */
+    .press-card {
+      transition: transform 0.15s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.15s cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    .press-card:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0 #17171A;
+    }
+
+    .press-btn {
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+    }
+
+    .press-btn:hover {
+      transform: translate(-1.5px, -1.5px);
+      box-shadow: 5px 5px 0 #17171A;
+    }
+
+    .press-btn:active {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 #17171A;
+    }
+
+    /* Risograph misregistration visual flavor */
+    .riso-dot-pattern {
+      background-image: radial-gradient(#2447D6 1.5px, transparent 1.5px);
+      background-size: 14px 14px;
+    }
+
+    /* Scroll Animations */
+    .fade-up-element {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-up-element.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body
+  class="bg-paper-noise text-ink font-sans min-h-screen selection:bg-accent-pink selection:text-ink antialiased relative">
+  <!-- ========================================================= -->
+  <!-- 1. NAVBAR -->
+  <!-- ========================================================= -->
+  <header class="sticky top-0 z-40 bg-[#F3EEE3]/95 backdrop-blur-md border-b-2 border-ink">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo: Designer Name with Risograph Asterisk -->
+      <a class="flex items-center gap-2 group" href="#">
+        <div class="w-11 h-11 rounded-full border-2 border-ink shadow-stamp overflow-hidden group-hover:-rotate-6 transition-transform shrink-0 flex items-center justify-center bg-black"><img src="images/logo-256.png" alt="Rupam Nandan logo" class="w-full h-full object-cover scale-[1.2]" /></div>
+        <div class="flex flex-col">
+          <span
+            class="font-serif font-bold text-2xl tracking-tight text-ink group-hover:text-primary-blue transition-colors">
+            Rupam Nandan
+          </span>
+          <span class="text-xs text-ink-muted -mt-1 font-medium tracking-wide">
+            Print Studio &amp; Visuals
+          </span>
+        </div>
+      </a>
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-4 lg:gap-6 text-sm font-semibold tracking-wide">
+        <a class="hover:text-primary-blue transition-colors" href="#work">Work</a>
+        <a class="hover:text-primary-blue transition-colors" href="#mockup-lab">Apparel Lab</a>
+        <a class="hover:text-primary-blue transition-colors" href="#about">About</a>
+        <a class="hover:text-primary-blue transition-colors" href="#services">Services</a>
+        <a class="hover:text-primary-blue transition-colors" href="#process">Process</a>
+        <a class="hover:text-primary-blue transition-colors" href="#contact">Contact</a>
+      </nav>
+      <!-- Desktop Action Buttons -->
+      <div class="hidden md:flex items-center gap-3">
+        <!-- Auth Logged Out -->
+        <div id="desktop-auth-container" class="flex items-center gap-3">
+          <button id="btn-sign-in" class="press-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white text-ink font-semibold text-sm border-2 border-ink shadow-flat hover:bg-paper-light">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Sign In
+          </button>
+        </div>
+        <!-- Auth Logged In -->
+        <div id="desktop-user-container" class="hidden items-center gap-3">
+          <span id="nav-user-name" class="font-bold text-sm text-ink truncate max-w-[120px]"></span>
+          <a id="nav-admin-link" class="hidden press-btn inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-accent-pink text-white font-semibold text-sm border-2 border-ink shadow-flat hover:bg-paper-light hover:text-ink" href="#admin">Admin Dashboard</a>
+            <button id="btn-sign-out" class="text-ink-muted hover:text-ink text-sm font-semibold underline decoration-2 underline-offset-4 mr-2">
+            Sign Out
+          </button>
+          <a class="press-btn inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white text-ink font-semibold text-sm border-2 border-ink shadow-flat hover:bg-paper-light" href="#track-inquiry">
+            My Inquiries
+          </a>
+        </div>
+        
+        <a class="press-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary-blue text-white font-semibold text-sm border-2 border-ink shadow-flat"
+          href="#contact">
+          <span class="">Hire Me</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            data-lucide="arrow-up-right" aria-hidden="true" class="lucide lucide-arrow-up-right w-4 h-4">
+            <path d="M7 7h10v10"></path>
+            <path d="M7 17 17 7"></path>
+          </svg>
+        </a>
+      </div>
+      <!-- Mobile Hamburger Button -->
+      <button aria-label="Open Navigation Menu"
+        class="md:hidden p-2 rounded-lg border-2 border-ink bg-white shadow-stamp hover:bg-accent-yellow transition-colors"
+        id="mobile-menu-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu"
+          aria-hidden="true" class="lucide lucide-menu w-6 h-6 text-ink">
+          <path d="M4 5h16"></path>
+          <path d="M4 12h16"></path>
+          <path d="M4 19h16"></path>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Dropdown Menu -->
+    <div class="hidden md:hidden border-b-2 border-ink bg-[#FAF7F0] px-6 py-6 shadow-flat-lg" id="mobile-menu">
+      <div class="flex flex-col gap-4 text-base font-semibold">
+        <a class="mobile-link hover:text-primary-blue py-1" href="#work">Work</a>
+        <a class="mobile-link hover:text-primary-blue py-1" href="#mockup-lab">Apparel Lab</a>
+        <a class="mobile-link hover:text-primary-blue py-1" href="#about">About</a>
+        <a class="mobile-link hover:text-primary-blue py-1" href="#services">Services</a>
+        <a class="mobile-link hover:text-primary-blue py-1" href="#process">Process</a>
+        <a class="mobile-link hover:text-primary-blue py-1" href="#contact">Contact</a>
+        <div id="mobile-auth-container" class="flex flex-col gap-3 mt-2">
+          <button id="mobile-btn-sign-in" class="mobile-link text-center py-3 rounded-lg bg-white text-ink border-2 border-ink shadow-stamp font-bold">
+            Sign In
+          </button>
+          <a class="mobile-link text-center py-3 rounded-lg bg-primary-blue text-white border-2 border-ink shadow-stamp font-bold"
+            href="#contact">
+            Hire Me ✦
+          </a>
+        </div>
+        <div id="mobile-user-container" class="hidden flex-col gap-3 mt-2">
+          <div id="mobile-user-name" class="text-center py-2 font-bold text-ink truncate"></div>
+          <a class="mobile-link text-center py-3 rounded-lg bg-white text-ink border-2 border-ink shadow-stamp font-bold"
+            href="#track-inquiry">
+            My Inquiries
+          </a>
+          <a id="mobile-nav-admin-link" class="hidden mobile-link text-center py-3 rounded-lg bg-accent-pink text-white border-2 border-ink shadow-stamp font-bold" href="#admin">Admin Dashboard</a>
+            <button id="mobile-btn-sign-out" class="mobile-link text-center py-3 rounded-lg bg-paper-light border-2 border-ink shadow-stamp font-bold text-ink">
+            Sign Out
+          </button>
+          <a class="mobile-link text-center py-3 rounded-lg bg-primary-blue text-white border-2 border-ink shadow-stamp font-bold"
+            href="#contact">
+            Hire Me ✦
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ========================================================= -->
+  <!-- 2. HERO SECTION -->
+  <!-- ========================================================= -->
+  <section class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <!-- Left Column: Copy & CTAs -->
+      <div class="lg:col-span-7 flex flex-col items-start">
+        <!-- Badge -->
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent-yellow border-2 border-ink shadow-stamp text-xs font-bold tracking-wide uppercase mb-6">
+          <span class="">✻</span>
+          <span class="">Freelance Graphic Designer &amp; Printmaker</span>
+        </div>
+        <!-- Headline in Fraunces Serif -->
+        <h1 class="font-serif font-bold text-4xl sm:text-6xl lg:text-[68px] leading-[1.08] text-ink tracking-tight">
+          Designing bold ideas into
+          <span class="relative inline-block whitespace-nowrap">
+            <span class="relative z-10">wearable &amp; visual</span>
+            <!-- Pink squiggle underline accent -->
+            <svg class="absolute -bottom-2 left-0 w-full h-4 text-accent-pink z-0" fill="none"
+              preserveAspectRatio="none" viewBox="0 0 280 16">
+              <path d="M4 12 Q 35 2, 70 12 T 140 12 T 210 12 T 276 10" stroke="currentColor" stroke-linecap="round"
+                stroke-width="4.5"></path>
+            </svg>
+          </span>
+          stories.
+        </h1>
+        <!-- Intro Copy -->
+        <p class="mt-8 text-lg sm:text-xl text-ink-muted leading-relaxed max-w-2xl">
+          Hey there! I’m Rupam — crafting expressive screen prints, tactile apparel graphics, and collectible posters
+          for independent brands, musicians, and cultural projects.
+        </p>
+        <!-- CTA Buttons -->
+        <div class="mt-10 flex flex-wrap items-center gap-4">
+          <a class="press-btn inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-primary-blue text-white font-bold text-base border-2 border-ink shadow-flat"
+            href="#work">
+            <span class="">View My Work</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              data-lucide="arrow-down" aria-hidden="true" class="lucide lucide-arrow-down w-4 h-4">
+              <path d="M12 5v14"></path>
+              <path d="m19 12-7 7-7-7"></path>
+            </svg>
+          </a>
+          <a class="press-btn inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-white text-ink font-bold text-base border-2 border-ink shadow-flat hover:bg-paper-light"
+            href="#contact">
+            <span class="">Let's Talk</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              data-lucide="message-circle" aria-hidden="true"
+              class="lucide lucide-message-circle w-4 h-4 text-primary-blue">
+              <path
+                d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719">
+              </path>
+            </svg>
+          </a>
+        </div>
+        <!-- Studio Note badge -->
+        <div class="mt-8 flex items-center gap-3 text-xs font-semibold text-ink-muted">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>
+          <span class="">Available for commissions &amp; collaborations • Autumn 2026</span>
+        </div>
+      </div>
+      <!-- Right Column: Hero Showcase Card with Riso stamp -->
+      <div class="lg:col-span-5 relative">
+        <!-- Background Offset Mat -->
+        <div
+          class="absolute -inset-2 bg-accent-pink/30 rounded-2xl transform rotate-1 border-2 border-ink pointer-events-none">
+        </div>
+        <!-- Main Artwork Card -->
+        <div class="relative bg-white border-2 border-ink rounded-xl p-4 shadow-flat-lg">
+          <!-- Mat Frame -->
+          <div class="bg-paper-light border border-ink/30 rounded-lg p-3">
+            <div class="aspect-[4/5] rounded-md overflow-hidden border border-ink/40 relative">
+              <img alt="Rupam Nandan portrait" class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaqZb69S_fbepZsEY9dVjOmEwVw1cP5SZ60ktCzYs0STjO4RU0cvFxAHau3buBPkvzn7uLkwTx55dU2ppgGF5kfA-JkCZy4b-Wo-bKx4r-8ECH8lNp7f9e-V-1vLSvbLVUmVArgXV7Q48NOdFCjmcscxN2dwP129RzWws5D66PFYORqRA3HLhLzfU5fIIhp_MlVC5ghhD9U5n7A6cjAecczKJ55tmTHuifNXoN3a9ZsaR0pGa1VGkwtfdgH4M8oG2WYxsb8Jt2KZWMbIk">
+              <div class="absolute inset-0 bg-ink/5 pointer-events-none"></div>
+            </div>
+          </div>
+          <!-- Bottom card label -->
+          <div class="mt-4 flex items-center justify-between text-xs font-semibold text-ink">
+            <div><span class="font-serif font-bold text-sm block">Rupam Nandan</span><span
+                class="text-ink-muted">graphic designer and printmaker.</span></div>
+            <span class="px-2.5 py-1 rounded bg-accent-yellow border border-ink font-bold text-[11px]">
+              LIMITED RUN
+            </span>
+          </div>
+          <!-- Overlapping tilted sticker -->
+          <div
+            class="absolute -top-4 -right-4 px-3.5 py-1.5 rounded-md bg-accent-yellow border-2 border-ink shadow-stamp text-xs font-bold text-ink -rotate-6">
+            ✦ Available for work
+          </div>
+        </div>
+        <!-- Little Hand-Drawn Arrow Note -->
+        <div
+          class="absolute -bottom-8 -left-6 hidden sm:flex items-center gap-2 font-hand text-xl text-primary-blue rotate-3">
+          <span class="">handcrafted in the studio</span>
+          <span class="">⤷</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ========================================================= -->
+  <!-- 3. SELECTED WORK (FILTERABLE MASONRY & LIGHTBOX) -->
+  <!-- ========================================================= -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t-2 border-ink scroll-mt-32" id="work">
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+      <div>
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary-blue mb-2">
+          <span class="">01</span>
+          <span class="">✻</span>
+          <span class="">Archive of Tangible Work</span>
+        </div>
+        <h2 class="font-serif font-bold text-3xl sm:text-5xl text-ink tracking-tight">
+          Selected Work
+        </h2>
+        <p class="mt-2 text-ink-muted max-w-xl text-base">
+          From screen-printed streetwear releases to high-tactile risograph posters and custom brand graphics.
+        </p>
+      </div>
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap items-center gap-2 p-1 bg-white border-2 border-ink rounded-xl shadow-stamp"
+        id="filter-tabs">
+        <button
+          class="filter-btn active px-4 py-2 rounded-lg text-xs sm:text-sm font-bold border border-ink bg-primary-blue text-white shadow-stamp"
+          data-category="all">
+          All (18)
+        </button>
+        <button class="filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-bold hover:bg-paper text-ink"
+          data-category="tshirts">
+          T-Shirts (7)
+        </button>
+        <button class="filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-bold hover:bg-paper text-ink"
+          data-category="posters">
+          Posters (9)
+        </button>
+        <button class="filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-bold hover:bg-paper text-ink"
+          data-category="elements">
+          Design Elements (2)
+        </button>
+      </div>
+    </div>
+    <!-- Masonry Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+      <div
+        class="press-card rounded-2xl bg-white border-2 border-ink shadow-flat overflow-hidden cursor-pointer group flex flex-col justify-between">
+        <div
+          class="aspect-[4/5] w-full overflow-hidden bg-paper relative border-b-2 border-ink flex items-center justify-center p-3">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAqCan_kjBb1cLI8kh2-2Xa8FJQ3AVtw_UdEDoPhb8rCxhw9ysqTcBnN5kywytiEnoBcYYSo60cj55DCDflzPZYt0YGnozNVzEkfdxyvxx_fH3dmPnZcRcuVVe97HD1UAcCTDYF2WlyUGbiqdxh56C2w-aSpIrnHfiNy-iO3i0kc1-6PDXcCA844j_9Xn7oFS3ngpU1DhWZ933o_hKLX0RTC16ic2aeDT6B4u_RRtvv12VRzt0ErJJJg"
+            alt="Stay Strong Mountain Crest" loading="lazy"
+            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+          <div
+            class="absolute top-3 left-3 px-2.5 py-1 rounded bg-white/95 border border-ink text-[11px] font-bold text-ink shadow-stamp z-10">
+            T-Shirts
+          </div>
+        </div>
+        <div class="p-5 flex items-center justify-between">
+          <div class="pr-2">
+            <h3
+              class="font-serif font-bold text-lg text-ink group-hover:text-primary-blue transition-colors leading-snug line-clamp-1">
+              Stay Strong Mountain Crest
+            </h3>
+            <p class="text-xs text-ink-muted mt-1 font-medium truncate">Waterbased Discharge</p>
+          </div>
+          <span
+            class="w-8 h-8 rounded-full bg-paper border border-ink flex items-center justify-center text-ink group-hover:bg-accent-yellow transition-colors shadow-stamp flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye"
+              aria-hidden="true" class="lucide lucide-eye w-4 h-4">
+              <path
+                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0">
+              </path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div
+        class="press-card rounded-2xl bg-white border-2 border-ink shadow-flat overflow-hidden cursor-pointer group flex flex-col justify-between">
+        <div
+          class="aspect-[4/5] w-full overflow-hidden bg-paper relative border-b-2 border-ink flex items-center justify-center p-3">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiBopqjSDMn87aMb313-fOjkK1mH3JKxL7URq3dvThpBxUl2IqEcg4wcnwDH0tye0uElqKLd-enY72hsALlurhecfiEqDlnf-eduIHjZkuRCG5K-RaAKjiBLNwrEy1lYkj4T3Dy36Htqug_yvo7_AigR6j8M_NPJOq2qOKzu7IxtIlKMUaR0Ken8ueF5GhMBKVg7n6P548K0jDfU2SYUsR7_bQAbIQyOB6xheQeGXOBTsIeJKM7LNKRw"
+            alt="Stay Focused Stay Hungry" loading="lazy"
+            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+          <div
+            class="absolute top-3 left-3 px-2.5 py-1 rounded bg-white/95 border border-ink text-[11px] font-bold text-ink shadow-stamp z-10">
+            T-Shirts
+          </div>
+        </div>
+        <div class="p-5 flex items-center justify-between">
+          <div class="pr-2">
+            <h3
+              class="font-serif font-bold text-lg text-ink group-hover:text-primary-blue transition-colors leading-snug line-clamp-1">
+              Stay Focused Stay Hungry
+            </h3>
+            <p class="text-xs text-ink-muted mt-1 font-medium truncate">Plastisol Screenprint</p>
+          </div>
+          <span
+            class="w-8 h-8 rounded-full bg-paper border border-ink flex items-center justify-center text-ink group-hover:bg-accent-yellow transition-colors shadow-stamp flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye"
+              aria-hidden="true" class="lucide lucide-eye w-4 h-4">
+              <path
+                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0">
+              </path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div
+        class="press-card rounded-2xl bg-white border-2 border-ink shadow-flat overflow-hidden cursor-pointer group flex flex-col justify-between">
+        <div
+          class="aspect-[4/5] w-full overflow-hidden bg-paper relative border-b-2 border-ink flex items-center justify-center p-3">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUdrV62z7nHlBdUUc7E82IbG46auwv86MGz3d178dnoQySrBMPwthzSUXeBluiaPLrZBvXoq4gRkUBD5Xv331EEVZLiuUuFQ0G3jR6vV9B00l6mA6W-KlXEMRUKszvTiPUjEJzgAlbLBsB1pnqBqbL8IuogF5-HuwD8O_lStx90j2e2sbw5XglcBWOp8wn__FkgvZiKKYWTyjCIvAMivO3nkdramZQ1Fvk19ZNvX7NJ3QfyaCVOVpKMg"
+            alt="Momentum — Creative Graphics" loading="lazy"
+            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+          <div
+            class="absolute top-3 left-3 px-2.5 py-1 rounded bg-white/95 border border-ink text-[11px] font-bold text-ink shadow-stamp z-10">
+            T-Shirts
+          </div>
+        </div>
+        <div class="p-5 flex items-center justify-between">
+          <div class="pr-2">
+            <h3
+              class="font-serif font-bold text-lg text-ink group-hover:text-primary-blue transition-colors leading-snug line-clamp-1">
+              Momentum — Creative Graphics
+            </h3>
+            <p class="text-xs text-ink-muted mt-1 font-medium truncate">3D Puff Print</p>
+          </div>
+          <span
+            class="w-8 h-8 rounded-full bg-paper border border-ink flex items-center justify-center text-ink group-hover:bg-accent-yellow transition-colors shadow-stamp flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye"
+              aria-hidden="true" class="lucide lucide-eye w-4 h-4">
+              <path
+                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0">
+              </path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div
+        class="press-card rounded-2xl bg-white border-2 border-ink shadow-flat overflow-hidden cursor-pointer group flex flex-col justify-between">
+        <div
+          class="aspect-[4/5] w-full overflow-hidden bg-paper relative border-b-2 border-ink flex items-center justify-center p-3">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO2__920q9DbmWa5KjZsFSMrZTh3BcMICl_XdELvG0-ueeiZgizwMmmJJg-sk50OnK3wiKq8wIAwmNzgdBP4Y4fuLVcSasV0ZjDSPWqSi81W-j7fXEW4gsLRP4d30xt6M6jvAdHahnX_pkTA6vtf5mTJonPTE6B7jjiIYruvpdwE_4YyizAwzP2uUCan0Yw8Yq1QIhaQ9Mtvv3VX03mpEER8BtW2mjoQo0EdNqyxe5GmSr_C8Tcc-uNQ"
+            alt="Take The Risk Streetwear" loading="lazy"
+            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+          <div
+            class="absolute top-3 left-3 px-2.5 py-1 rounded bg-white/95 border border-ink text-[11px] font-bold text-ink shadow-stamp z-10">
+            T-Shirts
+          </div>
+        </div>
+        <div class="p-5 flex items-center justify-between">
+          <div class="pr-2">
+            <h3
+              class="font-serif font-bold text-lg text-ink group-hover:text-primary-blue transition-colors leading-snug line-clamp-1">
+              Take The Risk Streetwear
+            </h3>
+            <p class="text-xs text-ink-muted mt-1 font-medium truncate">Screenprint</p>
+          </div>
+          <span
+            class="w-8 h-8 rounded-full bg-paper border border-ink flex items-center justify-center text-ink group-hover:bg-accent-yellow transition-colors shadow-stamp flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye"
+              aria-hidden="true" class="lucide lucide-eye w-4 h-4">
+              <path
+                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0">
+              </path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div
+        class="press-card rounded-2xl bg-white border-2 border-ink shadow-flat overflow-hidden cursor-pointer group flex flex-col justify-between">
+        <div
+          class="aspect-[4/5] w-full overflow-hidden bg-paper relative border-b-2 border-ink flex items-center justify-center p-3">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfPTV99CSMdUcKvvxCm-yCKBkP5fRdJCjC3LCWIw1ISghlPmWnU7x2KWnd30cy7gUbkO3V2rE-bE74ESQ7SbmVEUGc3pdxGKkc6hdaFwq_Dw10lQJmqHvi5uyxRQxOELoWDa9GIDREPAu226QZtmoKJmS9X2le-weh8IDEH56AFqPR8ai2Ph0yfuBmiiyb67M5zBM00eg-MBCoZnPd74-Tp5UsKvNJNvtaNTmGLJYQyczXfptzF4Pw3A"
+            alt="Dream Big Grind Bigger" loading="lazy"
+            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+          <div
+            class="absolute top-3 left-3 px-2.5 py-1 rounded bg-white/95 border border-ink text-[11px] font-bold text-ink shadow-stamp z-10">
+            T-Shirts
+          </div>
+        </div>
+        <div class="p-5 flex items-center justify-between">
+          <div class="pr-2">
+            <h3
+              class="font-serif font-bold text-lg text-ink group-hover:text-primary-blue transition-colors leading-snug line-clamp-1">
+              Dream Big Grind Bigger
+            </h3>
+            <p class="text-xs text-ink-muted mt-1 font-medium truncate">Oversized Print</p>
+          </div>
+          <span
+            class="w-8 h-8 rounded-full bg-paper border border-ink flex items-center justify-center text-ink group-hover:bg-accent-yellow transition-colors shadow-stamp flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye"
+              aria-hidden="true" class="lucide lucide-eye w-4 h-4">
+              <path
+                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0">
+              </path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div
+        class="press-card rounded-2xl bg-white border-2 border-ink shadow-flat overflow-hidden cursor-pointer group flex flex-col justify-between">
+        <div
+          class="aspect-[4/5] w-full overflow-hidden bg-paper relative border-b-2 border-ink flex items-center justify-center p-3">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOwRh41VW67wWsHsWSwxwDVYJTqevLiE2_hRdbYPZ0MBKOMstlRq5D_LK9p3FiCFt4abcNk2oPFTn-9FWcKi4mztiE3LefBQsTc_l2qcDsiV6RhOk-Yd5A3BwadholXWUEgm4WrMFjAoQSo0YvgYjfV395k8WSykD2SqYZcOEXL1gcqFpW5J6B-dG0PXj0TlQlI5f5_EENFcdBf74Ok4cGpnjatP_hGBkDbpdHL_yO_jYLrcc8PK4AeQ"
+            alt="Real Is Rare Multi-Texture" loading="lazy"
+            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+          <div
+            class="absolute top-3 left-3 px-2.5 py-1 rounded bg-white/95 border border-ink text-[11px] font-bold text-ink shadow-stamp z-10">
+            T-Shirts
+          </div>
+        </div>
+        <div class="p-5 flex items-center justify-between">
+          <div class="pr-2">
+            <h3
+              class="font-serif font-bold text-lg text-ink group-hover:text-primary-blue transition-colors leading-snug line-clamp-1">
+              Real Is Rare Multi-Texture
+            </h3>
+            <p class="text-xs text-ink-muted mt-1 font-medium truncate">Puff Print</p>
+          </div>
+          <span
+            class="w-8 h-8 rounded-full bg-paper border border-ink flex items-center justify-center text-ink group-hover:bg-accent-yellow transition-colors shadow-stamp flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye"
+              aria-hidden="true" class="lucide lucide-eye w-4 h-4">
+              <path
+                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0">
+              </path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div
+        class="press-card rounded-2xl bg-white border-2 border-ink shadow-flat overflow-hidden cursor-pointer group flex flex-col justify-between">
+        <div
+          class="aspect-[4/5] w-full overflow-hidden bg-paper relative border-b-2 border-ink flex items-center justify-center p-3">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBztsGKxuf_VXdYLxrm-qJ9nCCAYqT_23JAEI1kM-uEGbnSkTBeYCLlYgTFNyKN2GQW4CKxgtmYsOW4_kvc_TWnrJPfFenqW8ddFTGRAOnZ4lAMIo3iPOiJrEWU-PML2_l-TKzGeo49LFer02jrWv_UnQ_8aFfgcR6W3psa0U3Kn5z8kEtUvUUsgbcCUdtOoSwakURZZO7SLg0oW54RUX4bo5rMp9l35WS7Os0Xlux7A-u0OIc6AMb0WA"
+            alt="Cosmic Voyager Space Tee" loading="lazy"
+            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+          <div
+            class="absolute top-3 left-3 px-2.5 py-1 rounded bg-white/95 border border-ink text-[11px] font-bold text-ink shadow-stamp z-10">
+            T-Shirts
+          </div>
+        </div>
+        <div class="p-5 flex items-center justify-between">
+          <div class="pr-2">
+            <h3
+              class="font-serif font-bold text-lg text-ink group-hover:text-primary-blue transition-colors leading-snug line-clamp-1">
+              Cosmic Voyager Space Tee
+            </h3>
+            <p class="text-xs text-ink-muted mt-1 font-medium truncate">3-Color Screenprint</p>
+          </div>
+          <span
+            class="w-8 h-8 rounded-full bg-paper border border-ink flex items-center justify-center text-ink group-hover:bg-accent-yellow transition-colors shadow-stamp flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye"
+              aria-hidden="true" class="lucide lucide-eye w-4 h-4">
+              <path
+                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0">
+              </path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div
+        class="press-card rounded-2xl bg-white border-2 border-ink shadow-flat overflow-hidden cursor-pointer group flex flex-col justify-between">
+        <div
+          class="aspect-[4/5] w-full overflow-hidden bg-paper relative border-b-2 border-ink flex items-center justify-center p-3">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH2-JkAPF-ZUexthkx4IHynuz6to-1iBem1ZwrSw7mCj5tiT9zORBT_uifC8QBP-Yntw6Tw8ONu20k5kRW6l7yetDqDYC1FqG_4RuowuT3RaqwYNqeyJJ5OUoOCrsjvYUBtqsbwuRFwsaUJ1LsbugIjmuMILFQbiAvS8xnusE5yrgwh1kcEkQPJ5Lr47aoMdzeMjbyQOwRMWdPs9nk6NdVMmVMAxqsu4hlRQM7iiCg_T2_avTFaKsM-Q"
+            alt="Call of the Sea — Sail Poster" loading="lazy"
+            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+          <div
+            class="absolute top-3 left-3 px-2.5 py-1 rounded bg-white/95 border border-ink text-[11px] font-bold text-ink shadow-stamp z-10">
+            Posters
+          </div>
+        </div>
+        <div class="p-5 flex items-center justify-between">
+          <div class="pr-2">
+            <h3
+              class="font-serif font-bold text-lg text-ink group-hover:text-primary-blue transition-colors leading-snug line-clamp-1">
+              Call of the Sea — Sail Poster
+            </h3>
+            <p class="text-xs text-ink-muted mt-1 font-medium truncate">Screenprint Art</p>
+          </div>
+          <span
+            class="w-8 h-8 rounded-full bg-paper border border-ink flex items-center justify-center text-ink group-hover:bg-accent-yellow transition-colors shadow-stamp flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye"
+              aria-hidden="true" class="lucide lucide-eye w-4 h-4">
+              <path
+                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0">
+              </path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div
+        class="press-card rounded-2xl bg-white border-2 border-ink shadow-flat overflow-hidden cursor-pointer group flex flex-col justify-between">
+        <div
+          class="aspect-[4/5] w-full overflow-hidden bg-paper relative border-b-2 border-ink flex items-center justify-center p-3">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5kI661GdE58ebGhlDZTPQkUESdzoIFKmwdUnwydVJfhZe18iSQA__C6S3Se2k8IrndRJrSdK6LJQTph0f8Ui4jtpt1XARmxs4XSnvHEdJvujmIK3fJxcyU1NzkiImCN-lnAqgfQ0P6YEmO3V3Omvdm2MybLzcJCdF7FQYYMUzkmZKFZo5UvmwfmLPkbePyDnVaBvvPB1UIg6nW1-Ad4bOwYIylQ0qlDBt3OAp20rKdv54PL8Ne1IYBA"
+            alt="Skilled Sailor Apparel Art" loading="lazy"
+            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+          <div
+            class="absolute top-3 left-3 px-2.5 py-1 rounded bg-white/95 border border-ink text-[11px] font-bold text-ink shadow-stamp z-10">
+            Posters
+          </div>
+        </div>
+        <div class="p-5 flex items-center justify-between">
+          <div class="pr-2">
+            <h3
+              class="font-serif font-bold text-lg text-ink group-hover:text-primary-blue transition-colors leading-snug line-clamp-1">
+              Skilled Sailor Apparel Art
+            </h3>
+            <p class="text-xs text-ink-muted mt-1 font-medium truncate">Linework Engraving</p>
+          </div>
+          <span
+            class="w-8 h-8 rounded-full bg-paper border border-ink flex items-center justify-center text-ink group-hover:bg-accent-yellow transition-colors shadow-stamp flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye"
+              aria-hidden="true" class="lucide lucide-eye w-4 h-4">
+              <path
+                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0">
+              </path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div
+        class="press-card rounded-2xl bg-white border-2 border-ink shadow-flat overflow-hidden cursor-pointer group flex flex-col justify-between">
+        <div
+          class="aspect-[4/5] w-full overflow-hidden bg-paper relative border-b-2 border-ink flex items-center justify-center p-3">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxaOJrEuuolu_mzTqVXZ9I_iN5P_kIgfZAsRsC06rgtBFGD5A1Jd9Vx4HQ-dNYcLTyABEsrrV3fViP_LA9PZh6OSfvCLoI61a3yhiazV2CGnkOl9To3kjlGKr-J8XSZAspDon3dwGpWgXdCAN7wvRcECok8rynWZex1wLaizmJ_g7LHeAjLjQfX8tYV3LpX-VN95Bym_KbMtU8MOomJTcNb8tlFAUbONCayH1KcY4D8psJJlxUD2nMTw"
+            alt="Waves of Destiny Vintage Print" loading="lazy"
+            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+          <div
+            class="absolute top-3 left-3 px-2.5 py-1 rounded bg-white/95 border border-ink text-[11px] font-bold text-ink shadow-stamp z-10">
+            Posters
+          </div>
+        </div>
+        <div class="p-5 flex items-center justify-between">
+          <div class="pr-2">
+            <h3
+              class="font-serif font-bold text-lg text-ink group-hover:text-primary-blue transition-colors leading-snug line-clamp-1">
+              Waves of Destiny Vintage Print
+            </h3>
+            <p class="text-xs text-ink-muted mt-1 font-medium truncate">2-Color Riso</p>
+          </div>
+          <span
+            class="w-8 h-8 rounded-full bg-paper border border-ink flex items-center justify-center text-ink group-hover:bg-accent-yellow transition-colors shadow-stamp flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye"
+              aria-hidden="true" class="lucide lucide-eye w-4 h-4">
+              <path
+                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0">
+              </path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div
+        class="press-card rounded-2xl bg-white border-2 border-ink shadow-flat overflow-hidden cursor-pointer group flex flex-col justify-between">
+        <div
+          class="aspect-[4/5] w-full overflow-hidden bg-paper relative border-b-2 border-ink flex items-center justify-center p-3">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB751TSRBd6DH7qb3rLkWAyOzBuGOJx8XkLefkYijmgNPB00h3Y3DvvMoE-Rkut8ieZCYHtcfGbPKVg7F3P85KPTfa6XhHTZh5Yb5GmtYakFjNvCotsZfF4kMt-MGXan-PeriM2DdfsdpXwuophJuJ26EaoCah_dPmuLHQdWm8xMWgtGi7ZEt08kYWdo-xbKquXbUGMyLr-xH6SogyCBk6jLWsfz0ibJ3tbnJiXYS4NuVHqsBxykNLKaQ"
+            alt="Creative Nib Bulb Emblem" loading="lazy"
+            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+          <div
+            class="absolute top-3 left-3 px-2.5 py-1 rounded bg-white/95 border border-ink text-[11px] font-bold text-ink shadow-stamp z-10">
+            Design Elements
+          </div>
+        </div>
+        <div class="p-5 flex items-center justify-between">
+          <div class="pr-2">
+            <h3
+              class="font-serif font-bold text-lg text-ink group-hover:text-primary-blue transition-colors leading-snug line-clamp-1">
+              Creative Nib Bulb Emblem
+            </h3>
+            <p class="text-xs text-ink-muted mt-1 font-medium truncate">Vector Emblem</p>
+          </div>
+          <span
+            class="w-8 h-8 rounded-full bg-paper border border-ink flex items-center justify-center text-ink group-hover:bg-accent-yellow transition-colors shadow-stamp flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye"
+              aria-hidden="true" class="lucide lucide-eye w-4 h-4">
+              <path
+                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0">
+              </path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div
+        class="press-card rounded-2xl bg-white border-2 border-ink shadow-flat overflow-hidden cursor-pointer group flex flex-col justify-between">
+        <div
+          class="aspect-[4/5] w-full overflow-hidden bg-paper relative border-b-2 border-ink flex items-center justify-center p-3">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwLgzFrBstFQqpjf6brZN9O2G-1EnMCyU47HNpBu-Tatt02psWJCr5v-UJfg2L7mxc-GT-pvElX0HZiSVTdLCh0N6l8LgDIxUG3_drsKZMnYh0yeis7hHuQboJA7cGKDqEpdM7yuTv9EiAAqabzG-fmSXEb3FTHm8d5oVb8uHTFX6WAJpSXzh5olspzU0DQxeott7k-C45hvZWdPuwv4-NLsKbalvpWaYWuaL3PVfhpeClR51rDIvvJQ"
+            alt="Bézier Pen Vector Craft Icon" loading="lazy"
+            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+          <div
+            class="absolute top-3 left-3 px-2.5 py-1 rounded bg-white/95 border border-ink text-[11px] font-bold text-ink shadow-stamp z-10">
+            Design Elements
+          </div>
+        </div>
+        <div class="p-5 flex items-center justify-between">
+          <div class="pr-2">
+            <h3
+              class="font-serif font-bold text-lg text-ink group-hover:text-primary-blue transition-colors leading-snug line-clamp-1">
+              Bézier Pen Vector Craft Icon
+            </h3>
+            <p class="text-xs text-ink-muted mt-1 font-medium truncate">Bézier Curves</p>
+          </div>
+          <span
+            class="w-8 h-8 rounded-full bg-paper border border-ink flex items-center justify-center text-ink group-hover:bg-accent-yellow transition-colors shadow-stamp flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye"
+              aria-hidden="true" class="lucide lucide-eye w-4 h-4">
+              <path
+                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0">
+              </path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div
+        class="press-card rounded-2xl bg-white border-2 border-ink shadow-flat overflow-hidden cursor-pointer group flex flex-col justify-between">
+        <div
+          class="aspect-[4/5] w-full overflow-hidden bg-paper relative border-b-2 border-ink flex items-center justify-center p-3">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf6Y1_ZbZAA9h9DXFzPKLzLiCfZh8Dg4EEU870jzSgBX_F9ob8LM0d9WWjClOH3iGyi--nNOD4wy01SczRTPUDqSQkxWeWq6K-eE-_Yn0M-qT98V5PPLXTB84ZR1b4ou3eW4Ene0JyZ3mjveUGjR8QYvw3mKiEkBtkzF0-c1w3MdhoeLAMyL7SiYTJwbm7SE_R1k4md8PeiCr708y-Jq_SiJGTVUon-fIytgZ5ksG-l7QmsYoOmkqU1w"
+            alt="PATIENCE — Streetwear Statue" loading="lazy"
+            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+          <div
+            class="absolute top-3 left-3 px-2.5 py-1 rounded bg-white/95 border border-ink text-[11px] font-bold text-ink shadow-stamp z-10">
+            Posters
+          </div>
+        </div>
+        <div class="p-5 flex items-center justify-between">
+          <div class="pr-2">
+            <h3
+              class="font-serif font-bold text-lg text-ink group-hover:text-primary-blue transition-colors leading-snug line-clamp-1">
+              PATIENCE — Streetwear Statue
+            </h3>
+            <p class="text-xs text-ink-muted mt-1 font-medium truncate">Cracked Marble Riso Poster</p>
+          </div>
+          <span
+            class="w-8 h-8 rounded-full bg-paper border border-ink flex items-center justify-center text-ink group-hover:bg-accent-yellow transition-colors shadow-stamp flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye"
+              aria-hidden="true" class="lucide lucide-eye w-4 h-4">
+              <path
+                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0">
+              </path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div
+        class="press-card rounded-2xl bg-white border-2 border-ink shadow-flat overflow-hidden cursor-pointer group flex flex-col justify-between">
+        <div
+          class="aspect-[4/5] w-full overflow-hidden bg-paper relative border-b-2 border-ink flex items-center justify-center p-3">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZnn10aMkmk0-CvMeNZe9pa_qLQ8uzUpIUkMcPVFwZtYmPi25TTg0p6Yzi0gOyshdAWDnvv-N0u4YAPhLeN0dBZaXWoA446O23rqSoqUKaLigi_6rH45S_0I90FU8GpU4UfQ8s-azXzcvxjskfpPthwPXrBhUPCNefW0joyn55NhftUvSKRoOKjGOBZ7igGiWG88QKY_QwZK_7-Ckt55sTzp0vOo_IZtXECp0YHHFdNpExZ6XokWvyHg"
+            alt="PEACE — Enjoy The Wind" loading="lazy"
+            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+          <div
+            class="absolute top-3 left-3 px-2.5 py-1 rounded bg-white/95 border border-ink text-[11px] font-bold text-ink shadow-stamp z-10">
+            Posters
+          </div>
+        </div>
+        <div class="p-5 flex items-center justify-between">
+          <div class="pr-2">
+            <h3
+              class="font-serif font-bold text-lg text-ink group-hover:text-primary-blue transition-colors leading-snug line-clamp-1">
+              PEACE — Enjoy The Wind
+            </h3>
+            <p class="text-xs text-ink-muted mt-1 font-medium truncate">2-Color Riso Print</p>
+          </div>
+          <span
+            class="w-8 h-8 rounded-full bg-paper border border-ink flex items-center justify-center text-ink group-hover:bg-accent-yellow transition-colors shadow-stamp flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye"
+              aria-hidden="true" class="lucide lucide-eye w-4 h-4">
+              <path
+                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0">
+              </path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div
+        class="press-card rounded-2xl bg-white border-2 border-ink shadow-flat overflow-hidden cursor-pointer group flex flex-col justify-between">
+        <div
+          class="aspect-[4/5] w-full overflow-hidden bg-paper relative border-b-2 border-ink flex items-center justify-center p-3">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzIVV8syr1a448xvgIZMa0IFMMKPNbvdfa41gaD9F2u_QD5qwPgLdYFhPDoWtjXSYmBJt9g_7h1iF1FA8cosOOnQk3RDzKsapmiNIM0zTBxtstdIa1d1pFGfI6jSNH1jvAp2iY4vhRhOUo-NMxst3S1yYZfxK3laGC5gXzJJhKZHkNOAkqYP1vsKbhOZYlyaDcinuC2Rd3zol1k8eLxTc24GB68OvobbW0Qx3d-4y-JEZfnadAsqEgIw"
+            alt="Coca-Cola Refreshment Poster" loading="lazy"
+            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+          <div
+            class="absolute top-3 left-3 px-2.5 py-1 rounded bg-white/95 border border-ink text-[11px] font-bold text-ink shadow-stamp z-10">
+            Posters
+          </div>
+        </div>
+        <div class="p-5 flex items-center justify-between">
+          <div class="pr-2">
+            <h3
+              class="font-serif font-bold text-lg text-ink group-hover:text-primary-blue transition-colors leading-snug line-clamp-1">
+              Coca-Cola Refreshment Poster
+            </h3>
+            <p class="text-xs text-ink-muted mt-1 font-medium truncate">Commercial Print Poster</p>
+          </div>
+          <span
+            class="w-8 h-8 rounded-full bg-paper border border-ink flex items-center justify-center text-ink group-hover:bg-accent-yellow transition-colors shadow-stamp flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye"
+              aria-hidden="true" class="lucide lucide-eye w-4 h-4">
+              <path
+                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0">
+              </path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div
+        class="press-card rounded-2xl bg-white border-2 border-ink shadow-flat overflow-hidden cursor-pointer group flex flex-col justify-between">
+        <div
+          class="aspect-[4/5] w-full overflow-hidden bg-paper relative border-b-2 border-ink flex items-center justify-center p-3">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuALzxg2r70_Y6coVStNvYcwzWQe7GYkxJapGjPWCUe0DxKdKrEymZ66zeLaYCOVCEeSUpdeBQKETqmGh1GJQsFSVUhGW9SRc7oSa8ejX9r1bhIAw9QAVaurXMJRIjPj_rr6mbNvjiu1Jy2ths6-auNkFHnuv145-iSB6Xjqx7ZAUbV6v7N2FS-YhOTXfWTlZxvCWLQmoEeFyuQAXYgxQmJivWolvOaHJtYTiJwRNov9qe4N15OGT9bYsQ"
+            alt="Hot &amp; Delicious Burger Poster" loading="lazy"
+            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+          <div
+            class="absolute top-3 left-3 px-2.5 py-1 rounded bg-white/95 border border-ink text-[11px] font-bold text-ink shadow-stamp z-10">
+            Posters
+          </div>
+        </div>
+        <div class="p-5 flex items-center justify-between">
+          <div class="pr-2">
+            <h3
+              class="font-serif font-bold text-lg text-ink group-hover:text-primary-blue transition-colors leading-snug line-clamp-1">
+              Hot &amp; Delicious Burger Poster
+            </h3>
+            <p class="text-xs text-ink-muted mt-1 font-medium truncate">Advertising Poster</p>
+          </div>
+          <span
+            class="w-8 h-8 rounded-full bg-paper border border-ink flex items-center justify-center text-ink group-hover:bg-accent-yellow transition-colors shadow-stamp flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye"
+              aria-hidden="true" class="lucide lucide-eye w-4 h-4">
+              <path
+                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0">
+              </path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div
+        class="press-card rounded-2xl bg-white border-2 border-ink shadow-flat overflow-hidden cursor-pointer group flex flex-col justify-between">
+        <div
+          class="aspect-[4/5] w-full overflow-hidden bg-paper relative border-b-2 border-ink flex items-center justify-center p-3">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYxDzsAWvk8z7L-N6p7JdPKRLYlR8cctgNcSjI6GfGFBnog_gdb6fRH0w_aWS2uqdWZJOPwPNazVrv-3wHinePga-6CaPWh4ndtpWSIKyh3hP_VrosUrKl_s9Z8nx0n41BBVDT9cPZeHy4x3VhQEZuaaetXfNveffs-2DDtYYGuEWnPgJkg5004VOwNxxZnIJxL9MxLc24M85TmvOTKUHGjySYRAxehUBEzLNWwBCgXvTYNTMIBWWI1Q"
+            alt="Audio Special Arrival Poster" loading="lazy"
+            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+          <div
+            class="absolute top-3 left-3 px-2.5 py-1 rounded bg-white/95 border border-ink text-[11px] font-bold text-ink shadow-stamp z-10">
+            Posters
+          </div>
+        </div>
+        <div class="p-5 flex items-center justify-between">
+          <div class="pr-2">
+            <h3
+              class="font-serif font-bold text-lg text-ink group-hover:text-primary-blue transition-colors leading-snug line-clamp-1">
+              Audio Special Arrival Poster
+            </h3>
+            <p class="text-xs text-ink-muted mt-1 font-medium truncate">Promotional Event Poster</p>
+          </div>
+          <span
+            class="w-8 h-8 rounded-full bg-paper border border-ink flex items-center justify-center text-ink group-hover:bg-accent-yellow transition-colors shadow-stamp flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye"
+              aria-hidden="true" class="lucide lucide-eye w-4 h-4">
+              <path
+                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0">
+              </path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div
+        class="press-card rounded-2xl bg-white border-2 border-ink shadow-flat overflow-hidden cursor-pointer group flex flex-col justify-between">
+        <div
+          class="aspect-[4/5] w-full overflow-hidden bg-paper relative border-b-2 border-ink flex items-center justify-center p-3">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYiP1X2JCxl673tSN5SellzBjMfj20ZxY6wf4jRx8fSv3KOGZp-W6m03IGtM01OdXubB0Spu4VWU51OeexQsl_FfQedchN42drRKEYAIGUwHwbuaOOqDnG5elTuKAA_e0exooQh1ifnDOgXFuX7C7J05MmAsAn9tTpaTp2KtjoFH5ak7QkcrL_EJNELiOp44QmBSDtJnp2TSIF8i-BAdL8wgrfOpBIf9todEzrUp23GRIEk9B_HHL30w"
+            alt="Nike Big Sale Promo Poster" loading="lazy"
+            class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+          <div
+            class="absolute top-3 left-3 px-2.5 py-1 rounded bg-white/95 border border-ink text-[11px] font-bold text-ink shadow-stamp z-10">
+            Posters
+          </div>
+        </div>
+        <div class="p-5 flex items-center justify-between">
+          <div class="pr-2">
+            <h3
+              class="font-serif font-bold text-lg text-ink group-hover:text-primary-blue transition-colors leading-snug line-clamp-1">
+              Nike Big Sale Promo Poster
+            </h3>
+            <p class="text-xs text-ink-muted mt-1 font-medium truncate">Apparel Promo Poster</p>
+          </div>
+          <span
+            class="w-8 h-8 rounded-full bg-paper border border-ink flex items-center justify-center text-ink group-hover:bg-accent-yellow transition-colors shadow-stamp flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye"
+              aria-hidden="true" class="lucide lucide-eye w-4 h-4">
+              <path
+                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0">
+              </path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- LIGHTBOX MODAL -->
+  <div aria-modal="true"
+    class="fixed inset-0 z-50 bg-ink/75 backdrop-blur-sm hidden flex items-center justify-center p-4 sm:p-8"
+    id="lightbox-modal" role="dialog">
+    <div
+      class="max-w-4xl w-full bg-[#FAF7F0] border-2 border-ink rounded-2xl overflow-hidden shadow-flat-xl flex flex-col md:flex-row relative">
+      <!-- Close Button -->
+      <button aria-label="Close Lightbox"
+        class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-white border-2 border-ink flex items-center justify-center text-ink hover:bg-accent-pink transition-colors shadow-stamp"
+        id="lightbox-close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x"
+          aria-hidden="true" class="lucide lucide-x w-5 h-5">
+          <path d="M18 6 6 18"></path>
+          <path d="m6 6 12 12"></path>
+        </svg>
+      </button>
+      <!-- Left: Image Area -->
+      <div
+        class="md:w-3/5 bg-paper p-6 border-b-2 md:border-b-0 md:border-r-2 border-ink flex items-center justify-center">
+        <div
+          class="relative border-2 border-ink rounded-xl overflow-hidden bg-white shadow-stamp max-h-[60vh] w-full flex items-center justify-center p-2">
+          <img alt="Project Preview" class="w-full h-auto object-contain max-h-[55vh]" id="lightbox-img" src="">
+        </div>
+      </div>
+      <!-- Right: Details Area -->
+      <div class="md:w-2/5 p-6 sm:p-8 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-3 py-1 rounded-full text-xs font-bold border border-ink bg-accent-yellow"
+              id="lightbox-category">Category</span>
+            <span class="text-xs text-ink-muted font-medium" id="lightbox-counter">01 of 18</span>
+          </div>
+          <h3 class="font-serif font-bold text-2xl sm:text-3xl text-ink leading-tight mb-4" id="lightbox-title">
+            Project Title
+          </h3>
+          <p class="text-sm text-ink-muted leading-relaxed mb-6" id="lightbox-desc">
+            Description of the project craftsmanship and print technique.
+          </p>
+          <div class="border-t border-ink/20 pt-4">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-ink mb-2">Techniques &amp; Print Medium</h4>
+            <div class="flex flex-wrap gap-2" id="lightbox-tools">
+              <!-- Injected tool pills -->
+            </div>
+          </div>
+        </div>
+        <div class="pt-6 border-t-2 border-ink mt-6 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <button aria-label="Previous"
+              class="w-9 h-9 rounded-lg bg-white border-2 border-ink shadow-stamp flex items-center justify-center hover:bg-paper transition-colors"
+              id="lightbox-prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                data-lucide="chevron-left" aria-hidden="true" class="lucide lucide-chevron-left w-4 h-4">
+                <path d="m15 18-6-6 6-6"></path>
+              </svg>
+            </button>
+            <button aria-label="Next"
+              class="w-9 h-9 rounded-lg bg-white border-2 border-ink shadow-stamp flex items-center justify-center hover:bg-paper transition-colors"
+              id="lightbox-next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4">
+                <path d="m9 18 6-6-6-6"></path>
+              </svg>
+            </button>
+          </div>
+          <a class="px-4 py-2 rounded-lg bg-primary-blue text-white text-xs font-bold border-2 border-ink shadow-stamp hover:bg-primary-blue/90"
+            href="#contact" onclick="closeLightbox()">
+            Commission Similar
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ========================================================= -->
+  <!-- 4. T-SHIRT MOCKUP SHOWCASE (LIVE APPAREL STUDIO) -->
+  <!-- ========================================================= -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t-2 border-ink scroll-mt-32" id="mockup-lab">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div
+        class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-accent-pink/30 border-2 border-ink shadow-stamp text-xs font-bold uppercase mb-3">
+        <span class="">✻</span>
+        <span class="">Interactive Workshop</span>
+      </div>
+      <h2 class="font-serif font-bold text-3xl sm:text-5xl text-ink tracking-tight">
+        Live Apparel Studio
+      </h2>
+      <p class="mt-3 text-ink-muted text-base">
+        Preview how custom screen-print artworks behave across authentic fabric dye swatches. Click colors and switch
+        between featured designs.
+      </p>
+    </div>
+    <!-- The Mockup Stage Container -->
+    <div class="bg-white border-2 border-ink rounded-2xl p-6 sm:p-12 shadow-flat-lg">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Left: Flat Vector T-Shirt Preview Box -->
+        <div
+          class="lg:col-span-7 flex flex-col items-center justify-center p-8 rounded-xl bg-paper-light border-2 border-ink relative min-h-[460px]">
+          <div
+            class="relative w-80 sm:w-96 md:w-[420px] aspect-[2/3] flex items-center justify-center transition-all duration-300">
+            <!-- SVG T-Shirt Shape matching the oversized boxy cut in the attachment -->
+            <svg class="w-full h-full drop-shadow-md transition-colors duration-300" fill="#FFFFFF" id="tshirt-svg"
+              viewBox="0 0 600 900">
+              <!-- Base Shirt Cut: Dropped shoulders, relaxed boxy torso, wide sleeves -->
+              <path
+                d="M 230,120 C 265,165 335,165 370,120 L 490,170 L 575,270 L 475,315 L 465,190 L 470,485 L 475,770 C 475,780 460,785 450,785 L 150,785 C 140,785 125,780 125,770 L 130,485 L 135,190 L 125,315 L 25,270 L 110,170 Z"
+                stroke="#17171A" stroke-linejoin="round" stroke-width="4"></path>
+              <!-- Inner Crewneck / Ribbed Collar -->
+              <path d="M 215,115 C 260,175 340,175 385,115" fill="none" stroke="#17171A" stroke-width="3.5"></path>
+              <path d="M 225,125 C 265,178 335,178 375,125" fill="none" stroke="#17171A" stroke-dasharray="3,3"
+                stroke-width="2"></path>
+              <!-- Dropped Shoulder & Sleeve Seams -->
+              <path d="M 110,170 L 135,215" stroke="#17171A" stroke-linecap="round" stroke-width="2.5"></path>
+              <path d="M 490,170 L 465,215" stroke="#17171A" stroke-linecap="round" stroke-width="2.5"></path>
+              <!-- Sleeve Hem Stitching -->
+              <path d="M 28,260 L 125,305" stroke="#17171A" stroke-dasharray="4,3" stroke-width="2"></path>
+              <path d="M 572,260 L 475,305" stroke="#17171A" stroke-dasharray="4,3" stroke-width="2"></path>
+              <!-- Bottom Hem Double Stitch Line -->
+              <path d="M 127,760 L 473,760" stroke="#17171A" stroke-dasharray="4,3" stroke-width="2"></path>
+              <path d="M 126,766 L 474,766" stroke="#17171A" stroke-dasharray="4,3" stroke-width="2"></path>
+            </svg>
+            <!-- T-Shirt Center Graphic Placement (Scaled & Centered on the chest) -->
+            <div
+              class="absolute top-[28%] left-1/2 -translate-x-1/2 w-44 sm:w-56 aspect-square rounded-lg overflow-hidden flex items-center justify-center p-2 mix-blend-multiply pointer-events-none transition-all duration-300"
+              id="tshirt-artwork-wrapper">
+              <img alt="Artwork Screen Graphic" class="w-full h-full object-contain" id="tshirt-artwork-img"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxHsie_ga_0qLk4nryGLHzkq5k5xC9GZYfdgjnEIR9FljaF7J2DD0TwCCky9R8cQ9dOVgoOjqIcw2WknjdRBeSOeqKUlEC9yPTxoU5jDfp1u21JNOn7xyn0hmW_yqqZpcREV1jlwvzR90YAumQG8vtesz3jap1OM_Ju2-R6xNbcgDcvMM-COw6tX0zBqHnbCyFc2rG2GrEikWayw-X1LCd-j1B-Fa3ppV_-LNKGGhE">
+            </div>
+            <!-- Print Tag Stamp -->
+            <div
+              class="absolute bottom-2 right-2 px-2.5 py-1 rounded bg-white border border-ink text-[11px] font-bold text-ink shadow-stamp">
+              3-Color Waterbased Riso
+            </div>
+          </div>
+          <div class="mt-4 text-xs text-ink-muted font-medium flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-accent-yellow border border-ink"></span>
+            <span class="">Simulated garment preview with breathable plastisol/waterbased inks</span>
+          </div>
+        </div>
+        <!-- Right: Studio Controls -->
+        <div class="lg:col-span-5 flex flex-col justify-center space-y-8">
+          <!-- Control 1: Garment Color -->
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <label class="text-xs font-bold uppercase tracking-wider text-ink">1. Garment Fabric Color</label>
+              <span class="text-xs font-bold text-primary-blue" id="selected-color-name">Natural White (#FFFFFF)</span>
+            </div>
+            <!-- Swatches row -->
+            <div class="flex items-center gap-3">
+              <!-- White -->
+              <button
+                class="swatch-btn ring-4 ring-primary-blue w-11 h-11 rounded-xl bg-[#FFFFFF] border-2 border-ink shadow-stamp hover:scale-105 transition-all"
+                onclick="setTshirtColor('#FFFFFF', 'Natural White', 'light', this)" title="Natural White"></button>
+              <!-- Black -->
+              <button
+                class="swatch-btn w-11 h-11 rounded-xl bg-[#1E1E22] border-2 border-ink shadow-stamp hover:scale-105 transition-all"
+                onclick="setTshirtColor('#1E1E22', 'Carbon Ink Black', 'dark', this)" title="Carbon Ink Black"></button>
+              <!-- Navy -->
+              <button
+                class="swatch-btn w-11 h-11 rounded-xl bg-[#1E293B] border-2 border-ink shadow-stamp hover:scale-105 transition-all"
+                onclick="setTshirtColor('#1E293B', 'Deep Studio Navy', 'dark', this)" title="Deep Studio Navy"></button>
+              <!-- Crimson Red -->
+              <button
+                class="swatch-btn w-11 h-11 rounded-xl bg-[#DC2626] border-2 border-ink shadow-stamp hover:scale-105 transition-all"
+                onclick="setTshirtColor('#DC2626', 'Crimson Riso Red', 'dark', this)" title="Crimson Riso Red"></button>
+              <!-- Olive Green -->
+              <button
+                class="swatch-btn w-11 h-11 rounded-xl bg-[#556B2F] border-2 border-ink shadow-stamp hover:scale-105 transition-all"
+                onclick="setTshirtColor('#556B2F', 'Vintage Olive', 'dark', this)" title="Vintage Olive"></button>
+            </div>
+          </div>
+          <!-- Control 2: Artworks -->
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <label class="text-xs font-bold uppercase tracking-wider text-ink">2. Choose Artwork Graphic</label>
+              <span class="text-xs font-bold text-ink" id="selected-artwork-title">01 Botanica Riso</span>
+            </div>
+            <div class="grid grid-cols-2 gap-3" id="tshirt-designs-carousel">
+              <!-- Button 1 -->
+              <button
+                class="design-thumb-btn active border-2 border-ink bg-white p-2.5 rounded-xl shadow-stamp flex items-center gap-2.5 text-left hover:bg-paper transition-all"
+                onclick="setTshirtArtwork(0, this)">
+                <img alt="Botanica" class="w-10 h-10 rounded border border-ink object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeWsjRNfb7yB5Eud-kcBziVui-mHquzUIHllvuEdoXngLJpzh_nRjQyCE9iM5GAOT8nJWUSrCq2WS8URMeFlEXQX4LFwbxuBvsXqRpL33sd-vnBYAeO8amZCCAzRoVXK5xEbLT-Y0DJ1Mp9UROSPs2PIpAyfS2_2HuJHmaQuR_YIG3ctPpSlp8dYJ_BvkQ8aDhyBnE5p21HeUC8_tOQAjdme5sACveOn3DfyfdvbqZ">
+                <div>
+                  <span class="text-xs font-bold text-ink block">01 Botanica Riso</span>
+                  <span class="text-[10px] text-ink-muted">Floral Geometry</span>
+                </div>
+              </button>
+              <!-- Button 2 -->
+              <button
+                class="design-thumb-btn border-2 border-ink bg-white p-2.5 rounded-xl shadow-stamp flex items-center gap-2.5 text-left hover:bg-paper transition-all"
+                onclick="setTshirtArtwork(1, this)">
+                <img alt="Midnight Sun" class="w-10 h-10 rounded border border-ink object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi45nkfFjUeee-Q48mg0WISYrOPNwwnA2Te9WVLOi1S7Uu3rdIoR_yneMpd85uT_NlBZHJHAVJJ3Tq2Ub-HtgIAX7zUzE6LaMYq2Mw3lUFnlhb87jYZJEfDiwWbnF6W64kag1fJAl166xwVBnRqbk5p52Fp9pTMZWZJxjhqZVuM_VchOVBh94mBEDcbE-2NmyC0-2rhUeWsSa77TAg7CCFD6VNHy20ODTuxCsKgP_t">
+                <div>
+                  <span class="text-xs font-bold text-ink block">02 Midnight Sun</span>
+                  <span class="text-[10px] text-ink-muted">Retro Astro</span>
+                </div>
+              </button>
+              <!-- Button 3 -->
+              <button
+                class="design-thumb-btn border-2 border-ink bg-white p-2.5 rounded-xl shadow-stamp flex items-center gap-2.5 text-left hover:bg-paper transition-all"
+                onclick="setTshirtArtwork(2, this)">
+                <img alt="Echo Sound" class="w-10 h-10 rounded border border-ink object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTFbZvnr0E4_MoWCb7px2Z9YUUfAhDa59prInWx147FxzYwwcGixJsPkhKSAi_S6thE_hsn1ZvKhc8vdNWtYJ34GJcywseK4pFaAbmcdPjb0Lz4XLOknm0tZxD0KJD3E5aAGdyK3wxctRRcfq7Fyrtq5VT7sHxKq_VxZI62e2-sgQAnv8wsw1A1w2EK4_hP5Tb-luJtZaA4qmEljJ1rbJHpRHmszVtqs0A1BQo990b">
+                <div>
+                  <span class="text-xs font-bold text-ink block">03 Echo Sound</span>
+                  <span class="text-[10px] text-ink-muted">Gig Poster Print</span>
+                </div>
+              </button>
+              <!-- Button 4 -->
+              <button
+                class="design-thumb-btn border-2 border-ink bg-white p-2.5 rounded-xl shadow-stamp flex items-center gap-2.5 text-left hover:bg-paper transition-all"
+                onclick="setTshirtArtwork(3, this)">
+                <img alt="Acid Bauhaus" class="w-10 h-10 rounded border border-ink object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOMPZivdDhyqO61guANXegfFS7XRJq_mJYEOaPoqaOkjXIqqSamVmVYsQsfOu3FzAI_iQ4ERNR2TdMT7UXKjBup05PnlxpqjFUOG8WJ_Nw9hAeL6LReo8mYF_lNyGfiT2lR2zERR_nsvdaNV3LwzpwcN83VOhEBMvxqGY5kR_8cd4k6Y1xiSXfoJfo3smQnlxecJd5x7q7rKzfGxq_q5hQXVf0kIkYFZm9bZ0sNaoe">
+                <div>
+                  <span class="text-xs font-bold text-ink block">04 Acid Bauhaus</span>
+                  <span class="text-[10px] text-ink-muted">Grid Halftones</span>
+                </div>
+              </button>
+            </div>
+          </div>
+          <!-- Print Specs Info -->
+          <div class="p-4 rounded-xl bg-paper-light border-2 border-ink shadow-stamp flex items-start gap-3">
+            <span class="text-primary-blue text-lg font-bold">✻</span>
+            <div class="text-xs leading-relaxed text-ink-muted">
+              <strong class="text-ink">Deliverables with every apparel order:</strong> Separated Pantone color layers
+              for screenprint films, 300 DPI transparent TIFF files for DTG, and scale guides for garment printers.
+            </div>
+          </div>
+          <!-- Order CTA -->
+          <a class="press-btn w-full py-3.5 rounded-xl bg-accent-yellow text-ink border-2 border-ink shadow-flat font-bold text-center text-sm"
+            href="#contact">
+            Request Custom Apparel Artwork ✦
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ========================================================= -->
+  <!-- 5. ABOUT SECTION -->
+  <!-- ========================================================= -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t-2 border-ink scroll-mt-32" id="about">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <!-- Left Column: Portrait with Pink Offset Paper Collage Mat -->
+      <div class="lg:col-span-5 relative flex justify-center">
+        <div class="relative w-full max-w-md">
+          <!-- Offset Pink Mat -->
+          <div class="absolute inset-0 bg-accent-pink rounded-2xl border-2 border-ink transform -rotate-3 shadow-flat">
+          </div>
+          <!-- Main Photo Container -->
+          <div
+            class="relative bg-white border-2 border-ink rounded-2xl p-4 shadow-stamp rotate-1 transition-transform hover:rotate-0">
+            <div class="aspect-[4/5] rounded-xl overflow-hidden border border-ink/40 bg-paper">
+              <img alt="Rupam Nandan portrait" class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM7KC-PNJRqu5Ef__JfQHHl0I76gqM9dpHoy0rJ-xEUHWdDiJ-DkNeTh83IfSEkj6YHEKAvqYraH_V4sV6LPQjlGD9qBlJhQRV2pyeRUHvcdKGDu7GJODs3c3dFexMhAmy2yBSSz6jMxMYeoobzBBVeDmEl4Fwyu8jtMDT1CQyWgX1FMMrAQqyGQSlvuAAtmcjkLedgNN9BVfZDtpxk1I3QeQTYGiiP9f62s5aOOI2rqY2BDDgKO76yFagNRtk86zSYDmcrdxS2x9miZY">
+            </div>
+            <div class="mt-4 pt-2 border-t border-ink/20 flex items-center justify-between">
+              <div>
+                <span class="font-serif font-bold text-lg text-ink">Rupam Nandan</span>
+                <span class="text-xs text-ink-muted block">Founder &amp; Lead Printmaker</span>
+              </div>
+              <span class="px-2.5 py-1 rounded bg-accent-yellow border border-ink text-xs font-bold">
+                EST. 2019
+              </span>
+            </div>
+          </div>
+          <!-- Handwritten style caption -->
+          <div
+            class="absolute -bottom-8 -right-4 bg-white px-3 py-1.5 rounded-lg border-2 border-ink shadow-stamp font-hand text-lg text-ink rotate-3">
+            Rupam in the studio, 2024 ✎
+          </div>
+        </div>
+      </div>
+      <!-- Right Column: Warm Bio, Tool Chips, and Milestone Stats -->
+      <div class="lg:col-span-7 flex flex-col space-y-8">
+        <div>
+          <div
+            class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary-blue mb-3">
+            <span class="">03</span>
+            <span class="">✻</span>
+            <span class="">The Maker &amp; His Medium</span>
+          </div>
+          <h2 class="font-serif font-bold text-3xl sm:text-5xl text-ink tracking-tight leading-tight">
+            Obsessed with ink on paper, halftone grain, and wearable culture.
+          </h2>
+        </div>
+        <div class="text-ink-muted space-y-4 text-base sm:text-lg leading-relaxed">
+          <p class="">
+            Hello! I’m <strong class="text-ink font-bold">Rupam Nandan</strong>, an independent graphic designer and
+            screen printer. My creative world sits at the intersection of analog printing presses, indie record sleeves,
+            and high-impact streetwear.
+          </p>
+          <p class="">
+            I love the tangible imperfections of physical printmaking: the microscopic texture of cotton paper, the
+            slight registration misalignment of a two-drum risograph, and hand-pulled waterbased inks that age
+            beautifully with every wash.
+          </p>
+        </div>
+        <!-- Creative Tool Chips -->
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-ink mb-3">Creative Tools &amp; Print Disciplines
+          </h3>
+          <div class="flex flex-wrap gap-2.5">
+            <span class="px-3.5 py-1.5 rounded-lg bg-white border-2 border-ink text-xs font-bold text-ink shadow-stamp">
+              Adobe Photoshop
+            </span>
+            <span class="px-3.5 py-1.5 rounded-lg bg-white border-2 border-ink text-xs font-bold text-ink shadow-stamp">
+              Adobe Illustrator
+            </span>
+            <span class="px-3.5 py-1.5 rounded-lg bg-white border-2 border-ink text-xs font-bold text-ink shadow-stamp">
+              Figma
+            </span>
+            <span class="px-3.5 py-1.5 rounded-lg bg-white border-2 border-ink text-xs font-bold text-ink shadow-stamp">
+              Procreate
+            </span>
+            <span
+              class="px-3.5 py-1.5 rounded-lg bg-accent-yellow border-2 border-ink text-xs font-bold text-ink shadow-stamp">
+              Screen Printing &amp; Riso
+            </span>
+          </div>
+        </div>
+        <!-- Stat Counter Boxes -->
+        <div class="grid grid-cols-3 gap-4 pt-4 border-t-2 border-ink">
+          <div class="p-4 rounded-xl bg-white border-2 border-ink shadow-stamp">
+            <div class="font-serif font-bold text-3xl sm:text-4xl text-primary-blue">
+              140+
+            </div>
+            <p class="text-xs font-bold text-ink-muted uppercase mt-1">Projects Done</p>
+          </div>
+          <div class="p-4 rounded-xl bg-white border-2 border-ink shadow-stamp">
+            <div class="font-serif font-bold text-3xl sm:text-4xl text-accent-pink">
+              85+
+            </div>
+            <p class="text-xs font-bold text-ink-muted uppercase mt-1">Happy Clients</p>
+          </div>
+          <div class="p-4 rounded-xl bg-white border-2 border-ink shadow-stamp">
+            <div class="font-serif font-bold text-3xl sm:text-4xl text-ink">
+              5+
+            </div>
+            <p class="text-xs font-bold text-ink-muted uppercase mt-1">Years Experience</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ========================================================= -->
+  <!-- 6. SERVICES SECTION -->
+  <!-- ========================================================= -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t-2 border-ink scroll-mt-32" id="services">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div
+        class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-accent-yellow border-2 border-ink shadow-stamp text-xs font-bold uppercase mb-3">
+        <span class="">✻</span>
+        <span class="">Studio Offerings</span>
+      </div>
+      <h2 class="font-serif font-bold text-3xl sm:text-5xl text-ink tracking-tight">
+        Tailored Design Services
+      </h2>
+      <p class="mt-3 text-ink-muted text-base">
+        Tactile, memorable graphic assets crafted for apparel drops, musical tours, editorial publishing, and creative
+        studios.
+      </p>
+    </div>
+    <!-- 4 Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Service 1 -->
+      <div class="press-card p-6 rounded-2xl bg-white border-2 border-ink shadow-flat flex flex-col justify-between">
+        <div>
+          <div
+            class="w-12 h-12 rounded-xl bg-accent-yellow border-2 border-ink shadow-stamp flex items-center justify-center text-ink mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shirt"
+              aria-hidden="true" class="lucide lucide-shirt w-6 h-6">
+              <path
+                d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-ink mb-2">
+            T-Shirt &amp; Apparel Design
+          </h3>
+          <p class="text-sm text-ink-muted leading-relaxed">
+            Custom front, back, and sleeve graphics formatted specifically for screen printing, DTG, or vinyl heat
+            transfers. Complete color separations included.
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-ink/20 flex items-center justify-between text-xs font-bold text-ink">
+          <span class="px-2 py-0.5 rounded bg-paper border border-ink">Pantone &amp; Vector</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4 text-primary-blue">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </div>
+      </div>
+      <!-- Service 2 -->
+      <div class="press-card p-6 rounded-2xl bg-white border-2 border-ink shadow-flat flex flex-col justify-between">
+        <div>
+          <div
+            class="w-12 h-12 rounded-xl bg-accent-pink border-2 border-ink shadow-stamp flex items-center justify-center text-ink mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              data-lucide="file-text" aria-hidden="true" class="lucide lucide-file-text w-6 h-6">
+              <path
+                d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z">
+              </path>
+              <path d="M14 2v5a1 1 0 0 0 1 1h5"></path>
+              <path d="M10 9H8"></path>
+              <path d="M16 13H8"></path>
+              <path d="M16 17H8"></path>
+            </svg>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-ink mb-2">
+            Poster &amp; Cover Art
+          </h3>
+          <p class="text-sm text-ink-muted leading-relaxed">
+            Tour flyers, collectible risograph prints, vinyl album jackets, and brutalist event posters ready for
+            commercial printing presses with bleed specifications.
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-ink/20 flex items-center justify-between text-xs font-bold text-ink">
+          <span class="px-2 py-0.5 rounded bg-paper border border-ink">CMYK + Spot Color</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4 text-primary-blue">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </div>
+      </div>
+      <!-- Service 3 -->
+      <div class="press-card p-6 rounded-2xl bg-white border-2 border-ink shadow-flat flex flex-col justify-between">
+        <div>
+          <div
+            class="w-12 h-12 rounded-xl bg-paper-light border-2 border-ink shadow-stamp flex items-center justify-center text-ink mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="layout"
+              aria-hidden="true" class="lucide lucide-layout w-6 h-6">
+              <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+              <path d="M3 9h18"></path>
+              <path d="M9 21V9"></path>
+            </svg>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-ink mb-2">
+            Brand &amp; Social Graphics
+          </h3>
+          <p class="text-sm text-ink-muted leading-relaxed">
+            Tactile visual identities, stamp badges, lookbook layouts, stickers, and editorial social carousels that
+            distinguish your label from generic templates.
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-ink/20 flex items-center justify-between text-xs font-bold text-ink">
+          <span class="px-2 py-0.5 rounded bg-paper border border-ink">Visual Guidelines</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4 text-primary-blue">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </div>
+      </div>
+      <!-- Service 4 -->
+      <div class="press-card p-6 rounded-2xl bg-white border-2 border-ink shadow-flat flex flex-col justify-between">
+        <div>
+          <div
+            class="w-12 h-12 rounded-xl bg-primary-blue border-2 border-ink shadow-stamp flex items-center justify-center text-white mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              data-lucide="sparkles" aria-hidden="true" class="lucide lucide-sparkles w-6 h-6">
+              <path
+                d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z">
+              </path>
+              <path d="M20 2v4"></path>
+              <path d="M22 4h-4"></path>
+              <circle cx="4" cy="20" r="2"></circle>
+            </svg>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-ink mb-2">
+            Custom Illustrations
+          </h3>
+          <p class="text-sm text-ink-muted leading-relaxed">
+            Bespoke iconography packs, risograph textures, botanical and architectural drawings, mascot characters, and
+            seamless repeat patterns.
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-ink/20 flex items-center justify-between text-xs font-bold text-ink">
+          <span class="px-2 py-0.5 rounded bg-paper border border-ink">Scalable SVG</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4 text-primary-blue">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ========================================================= -->
+  <!-- 7. PROCESS SECTION -->
+  <!-- ========================================================= -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t-2 border-ink scroll-mt-32" id="process">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+      <div>
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary-blue mb-2">
+          <span class="">05</span>
+          <span class="">✻</span>
+          <span class="">Studio Methodology</span>
+        </div>
+        <h2 class="font-serif font-bold text-3xl sm:text-5xl text-ink tracking-tight">
+          From Concept to Tangible Print
+        </h2>
+      </div>
+      <p class="text-ink-muted max-w-md text-base">
+        A reliable, four-step production pipeline honed through hundreds of commercial screen pulls and print runs.
+      </p>
+    </div>
+    <!-- 4-Step Horizontal Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Step 01 -->
+      <div class="p-6 rounded-2xl bg-white border-2 border-ink shadow-flat flex flex-col justify-between relative">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span
+              class="w-9 h-9 rounded-lg bg-accent-yellow border-2 border-ink shadow-stamp font-serif font-bold text-sm flex items-center justify-center text-ink">
+              01
+            </span>
+            <span class="text-xs font-bold uppercase text-ink-muted tracking-wider">Phase I</span>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-ink mb-2">Brief &amp; Moodboard</h3>
+          <p class="text-sm text-ink-muted leading-relaxed">
+            Defining your audience, garment base cuts or paper weights, ink count restrictions, and compiling visual
+            references.
+          </p>
+        </div>
+        <div class="mt-6 pt-3 border-t border-ink/20 text-xs font-semibold text-primary-blue flex items-center gap-1">
+          <span class="">✓ Strategy &amp; Specs</span>
+        </div>
+      </div>
+      <!-- Step 02 -->
+      <div class="p-6 rounded-2xl bg-white border-2 border-ink shadow-flat flex flex-col justify-between relative">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span
+              class="w-9 h-9 rounded-lg bg-accent-pink border-2 border-ink shadow-stamp font-serif font-bold text-sm flex items-center justify-center text-ink">
+              02
+            </span>
+            <span class="text-xs font-bold uppercase text-ink-muted tracking-wider">Phase II</span>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-ink mb-2">Concept &amp; Sketches</h3>
+          <p class="text-sm text-ink-muted leading-relaxed">
+            Drafting three distinct compositional directions, typography pairings, and rough thumbnail illustrations for
+            your initial review.
+          </p>
+        </div>
+        <div class="mt-6 pt-3 border-t border-ink/20 text-xs font-semibold text-primary-blue flex items-center gap-1">
+          <span class="">✓ Direction Lock</span>
+        </div>
+      </div>
+      <!-- Step 03 -->
+      <div class="p-6 rounded-2xl bg-white border-2 border-ink shadow-flat flex flex-col justify-between relative">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span
+              class="w-9 h-9 rounded-lg bg-primary-blue border-2 border-ink shadow-stamp font-serif font-bold text-sm flex items-center justify-center text-white">
+              03
+            </span>
+            <span class="text-xs font-bold uppercase text-ink-muted tracking-wider">Phase III</span>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-ink mb-2">Design &amp; Refinement</h3>
+          <p class="text-sm text-ink-muted leading-relaxed">
+            Vectorizing line art, calculating halftone frequency, generating riso traps, and refining typography through
+            collaborative feedback.
+          </p>
+        </div>
+        <div class="mt-6 pt-3 border-t border-ink/20 text-xs font-semibold text-primary-blue flex items-center gap-1">
+          <span class="">✓ Vector Polish</span>
+        </div>
+      </div>
+      <!-- Step 04 -->
+      <div class="p-6 rounded-2xl bg-white border-2 border-ink shadow-flat flex flex-col justify-between relative">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span
+              class="w-9 h-9 rounded-lg bg-paper-light border-2 border-ink shadow-stamp font-serif font-bold text-sm flex items-center justify-center text-ink">
+              04
+            </span>
+            <span class="text-xs font-bold uppercase text-ink-muted tracking-wider">Phase IV</span>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-ink mb-2">Production &amp; Delivery</h3>
+          <p class="text-sm text-ink-muted leading-relaxed">
+            Packaging 300 DPI master files, color-separated print PDFs, Pantone color cards, and manufacturer technical
+            callouts.
+          </p>
+        </div>
+        <div class="mt-6 pt-3 border-t border-ink/20 text-xs font-semibold text-primary-blue flex items-center gap-1">
+          <span class="">✓ Press-Ready Files</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ========================================================= -->
+  <!-- 8. TESTIMONIALS SECTION -->
+  <!-- ========================================================= -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t-2 border-ink scroll-mt-32">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <div
+        class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-accent-pink/30 border-2 border-ink shadow-stamp text-xs font-bold uppercase mb-3">
+        <span class="">✻</span>
+        <span class="">Client Words</span>
+      </div>
+      <h2 class="font-serif font-bold text-3xl sm:text-5xl text-ink tracking-tight">
+        Words from Collaborators
+      </h2>
+    </div>
+    <!-- 3 Alternating Playful Review Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Card 1: Warm Pink Background (#FF5C8A) -->
+      <div
+        class="press-card p-8 rounded-2xl bg-accent-pink border-2 border-ink shadow-flat flex flex-col justify-between">
+        <div>
+          <span class="font-serif font-bold text-4xl text-ink block mb-4">“</span>
+          <p class="text-ink font-medium leading-relaxed text-base mb-6">
+            Rupam took our indie apparel drop and turned it into art. Our screen printer was thrilled with the layer
+            separations. The entire capsule collection sold out in 48 hours.
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-ink/30">
+          <div
+            class="w-10 h-10 rounded-full bg-white border-2 border-ink flex items-center justify-center font-bold text-ink">
+            M
+          </div>
+          <div>
+            <h4 class="font-serif font-bold text-ink text-base">Marcus Vance</h4>
+            <p class="text-xs text-ink/80 font-medium">Founder, Midnight Syndicate</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2: Golden Yellow Background (#FFC93C) -->
+      <div
+        class="press-card p-8 rounded-2xl bg-accent-yellow border-2 border-ink shadow-flat flex flex-col justify-between">
+        <div>
+          <span class="font-serif font-bold text-4xl text-ink block mb-4">“</span>
+          <p class="text-ink font-medium leading-relaxed text-base mb-6">
+            The concert posters Rupam created had people tearing them off telephone poles to frame at home. His
+            understanding of riso grain and halftone textures is second to none.
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-ink/30">
+          <div
+            class="w-10 h-10 rounded-full bg-white border-2 border-ink flex items-center justify-center font-bold text-ink">
+            E
+          </div>
+          <div>
+            <h4 class="font-serif font-bold text-ink text-base">Elena Rostova</h4>
+            <p class="text-xs text-ink/80 font-medium">Curator, Soundwave Festival</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3: Crisp Cream Background (#FFFFFF) -->
+      <div class="press-card p-8 rounded-2xl bg-white border-2 border-ink shadow-flat flex flex-col justify-between">
+        <div>
+          <span class="font-serif font-bold text-4xl text-ink block mb-4">“</span>
+          <p class="text-ink font-medium leading-relaxed text-base mb-6">
+            Working with Rupam is refreshingly transparent. Clear timelines, thoughtful communication, and master print
+            files that required zero troubleshooting at our workshop.
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-ink/20">
+          <div
+            class="w-10 h-10 rounded-full bg-accent-yellow border-2 border-ink flex items-center justify-center font-bold text-ink">
+            T
+          </div>
+          <div>
+            <h4 class="font-serif font-bold text-ink text-base">Tariq Chen</h4>
+            <p class="text-xs text-ink-muted font-medium">Creative Director, Neon District</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ========================================================= -->
+  <!-- 9. MY INQUIRIES SECTION -->
+  <!-- ========================================================= -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t-2 border-ink scroll-mt-32" id="track-inquiry">
+    <div class="max-w-4xl mx-auto">
+      
+      <!-- Unauthenticated State -->
+      <div id="inquiries-unauth" class="bg-paper-light border-2 border-ink shadow-flat-xl rounded-2xl p-8 sm:p-12 text-center">
+        <h2 class="font-serif font-bold text-3xl sm:text-4xl text-ink tracking-tight mb-4">
+          My Inquiries
+        </h2>
+        <p class="text-ink-muted text-base mb-8">
+          Sign in to view the status of your submitted projects and quotes.
+        </p>
+        <button id="btn-inquiries-signin" class="press-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary-blue text-white font-bold text-lg border-2 border-ink shadow-flat">
+          Sign In to Continue
+        </button>
+      </div>
+
+      <!-- Authenticated State -->
+      <div id="inquiries-auth" class="hidden">
+        <div class="flex items-end justify-between mb-8">
+          <h2 class="font-serif font-bold text-3xl sm:text-4xl text-ink tracking-tight">
+            My Inquiries
+          </h2>
+        </div>
+        
+        <!-- Empty State -->
+        <div id="inquiries-empty" class="hidden bg-paper-light border-2 border-ink shadow-flat-xl rounded-2xl p-8 sm:p-12 text-center">
+          <p class="font-bold text-xl text-ink mb-4">No inquiries found.</p>
+          <p class="text-ink-muted text-base mb-8">You haven't submitted any project requests yet.</p>
+          <a href="#contact" class="press-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary-blue text-white font-bold text-base border-2 border-ink shadow-flat">
+            Start a Project
+          </a>
+        </div>
+
+        <!-- Inquiries List -->
+        <div id="inquiries-list" class="space-y-6">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 10. CONTACT SECTION -->
+  <!-- ========================================================= -->
+  
+  <section class="hidden py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t-2 border-ink scroll-mt-32" id="admin">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="font-serif font-bold text-4xl sm:text-5xl text-ink mb-2 fade-up-element">
+        Admin Dashboard
+      </h2>
+      <p class="text-ink-muted text-lg mb-12 fade-up-element">
+        Manage inquiries and client projects.
+      </p>
+
+      <div id="admin-auth" class="hidden">
+        <!-- Controls -->
+        <div class="flex flex-col sm:flex-row gap-4 mb-8 bg-paper-light p-4 rounded-xl border-2 border-ink shadow-flat">
+          <input type="text" id="admin-search" placeholder="Search name or email..." class="flex-1 px-4 py-2 border-2 border-ink bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue">
+          <select id="admin-filter" class="px-4 py-2 border-2 border-ink bg-white rounded-lg focus:outline-none font-bold text-ink cursor-pointer">
+            <option value="All">All Statuses</option>
+            <option value="Pending">Pending</option>
+            <option value="In Review">In Review</option>
+            <option value="Quote Sent">Quote Sent</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+          </select>
+        </div>
+        
+        <div id="admin-loading" class="hidden text-center py-12 font-bold text-ink-muted">Loading inquiries...</div>
+        <div id="admin-error" class="hidden text-center py-12 font-bold text-red-600 bg-red-50 border-2 border-red-200 rounded-xl"></div>
+        <div id="admin-empty" class="hidden text-center py-12 bg-paper border-2 border-ink border-dashed rounded-xl">
+          <p class="text-ink-muted font-bold text-lg">No inquiries found matching criteria.</p>
+        </div>
+
+        <div id="admin-list" class="flex flex-col gap-6">
+          <!-- Admin cards injected here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t-2 border-ink scroll-mt-32" id="contact">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+      <!-- Left Column: Designer Direct Details -->
+      <div class="lg:col-span-5 flex flex-col justify-between">
+        <div>
+          <div
+            class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary-blue mb-2">
+            <span class="">07</span>
+            <span class="">✻</span>
+            <span class="">Get in Touch</span>
+          </div>
+          <h2 class="font-serif font-bold text-3xl sm:text-5xl text-ink tracking-tight leading-tight">
+            Have a project in mind? Let’s make something tangible.
+          </h2>
+          <p class="mt-4 text-ink-muted text-base leading-relaxed">
+            Whether you’re planning a clothing capsule, need tour posters, or require custom illustrated branding, let’s
+            discuss your vision and manufacturing timeline.
+          </p>
+          <!-- Direct Email Button with Copy Feedback -->
+          <div class="mt-8">
+            <button
+              class="press-btn w-full p-4 rounded-xl bg-white border-2 border-ink shadow-flat flex items-center justify-between text-left group"
+              onclick="copyEmailToClipboard()">
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-10 h-10 rounded-lg bg-accent-yellow border-2 border-ink flex items-center justify-center text-ink">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    data-lucide="mail" aria-hidden="true" class="lucide lucide-mail w-5 h-5">
+                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  </svg>
+                </div>
+                <div>
+                  <span class="text-xs text-ink-muted font-bold block uppercase">Direct Studio Email</span>
+                  <span class="font-serif font-bold text-ink text-base">rupamsworkspace@gmail.com</span>
+                </div>
+              </div>
+              <span
+                class="px-3 py-1 rounded bg-paper border border-ink text-xs font-bold text-ink group-hover:bg-accent-pink"
+                id="copy-feedback-badge">
+                Copy
+              </span>
+            </button>
+          </div>
+          <!-- Social Links with Badges -->
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a class="press-btn px-4 py-2 rounded-lg bg-white border-2 border-ink shadow-stamp text-xs font-bold text-ink flex items-center gap-2 hover:bg-paper"
+              href="https://instagram.com/rupamsworkspace" rel="noopener noreferrer" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-accent-pink"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              <span class="">Instagram</span>
+            </a>
+            <a class="press-btn px-4 py-2 rounded-lg bg-white border-2 border-ink shadow-stamp text-xs font-bold text-ink flex items-center gap-2 hover:bg-paper"
+              href="https://t.me/rupamsworkspace" rel="noopener noreferrer" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="send"
+                aria-hidden="true" class="lucide lucide-send w-4 h-4 text-primary-blue">
+                <path
+                  d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z">
+                </path>
+                <path d="m21.854 2.147-10.94 10.939"></path>
+              </svg>
+              <span class="">Telegram</span>
+            </a>
+            <a class="press-btn px-4 py-2 rounded-lg bg-white border-2 border-ink shadow-stamp text-xs font-bold text-ink flex items-center gap-2 hover:bg-paper"
+              href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="disc"
+                aria-hidden="true" class="lucide lucide-disc w-4 h-4 text-accent-yellow">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
+              <span class="">Behance</span>
+            </a>
+          </div>
+        </div>
+        <!-- Availability Note Card -->
+        <div class="mt-8 p-4 rounded-xl bg-accent-yellow/30 border-2 border-ink shadow-stamp flex items-center gap-3">
+          <span class="w-3 h-3 rounded-full bg-emerald-600 animate-pulse"></span>
+          <p class="text-xs font-bold text-ink">
+            Currently accepting Q4 apparel &amp; poster commissions. Typical turnaround: 5–8 days.
+          </p>
+        </div>
+      </div>
+      <!-- Right Column: Interactive Paper Form -->
+      <div class="lg:col-span-7">
+        <div class="p-8 sm:p-10 rounded-2xl bg-white border-2 border-ink shadow-flat-lg">
+          <h3 class="font-serif font-bold text-2xl text-ink mb-1">Send Project Inquiry</h3>
+          <p class="text-xs text-ink-muted mb-6">Fill in the details below and I’ll get back to you within 24 hours.</p>
+          <form class="space-y-4" id="contact-form">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-ink uppercase mb-1" for="form-name">Your Name *</label>
+                <input
+                  class="w-full px-4 py-3 rounded-lg bg-paper-light border-2 border-ink text-ink text-sm focus:outline-none focus:ring-2 focus:ring-primary-blue"
+                  id="form-name" placeholder="Alex Rivera" required="" type="text">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-ink uppercase mb-1" for="form-email">Email Address *</label>
+                <input
+                  class="w-full px-4 py-3 rounded-lg bg-paper-light border-2 border-ink text-ink text-sm focus:outline-none focus:ring-2 focus:ring-primary-blue"
+                  id="form-email" placeholder="alex@studio.com" required="" type="email">
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-ink uppercase mb-1" for="form-category">Project Type</label>
+              <select
+                class="w-full px-4 py-3 rounded-lg bg-paper-light border-2 border-ink text-ink text-sm focus:outline-none focus:ring-2 focus:ring-primary-blue"
+                id="form-category">
+                <option value="tshirt">T-Shirt &amp; Apparel Drop</option>
+                <option value="poster">Gig Poster or Screenprint</option>
+                <option value="brand">Brand Identity &amp; Badges</option>
+                <option value="illustrations">Custom Illustrations</option>
+                <option value="other">Other Studio Commission</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-ink uppercase mb-1" for="form-message">Project Details
+                *</label>
+              <textarea
+                class="w-full px-4 py-3 rounded-lg bg-paper-light border-2 border-ink text-ink text-sm focus:outline-none focus:ring-2 focus:ring-primary-blue resize-none"
+                id="form-message"
+                placeholder="Tell me about your concept, print count, target launch date, and any references..."
+                required="" rows="4"></textarea>
+            </div>
+            <button
+              class="press-btn w-full py-3.5 rounded-xl bg-primary-blue text-white font-bold text-base border-2 border-ink shadow-flat flex items-center justify-center gap-2"
+              id="form-submit-btn" type="submit">
+              <span class="">Send Project Inquiry</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </button>
+            <!-- Success Alert -->
+            <div
+              class="hidden p-4 rounded-xl bg-accent-yellow border-2 border-ink text-ink text-xs font-bold flex items-center gap-3"
+              id="form-success">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                data-lucide="check-circle" aria-hidden="true"
+                class="lucide lucide-check-circle w-5 h-5 text-ink flex-shrink-0">
+                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                <path d="m9 11 3 3L22 4"></path>
+              </svg>
+              <span class="">Thank you! Your inquiry has been logged. Rupam will get back to you within 24 hours.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ========================================================= -->
+  <!-- 10. FOOTER -->
+  <!-- ========================================================= -->
+  <footer class="border-t-2 border-ink bg-[#F3EEE3] py-10 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-full border-2 border-ink shadow-stamp overflow-hidden shrink-0 flex items-center justify-center bg-black"><img src="images/logo-256.png" alt="Rupam Nandan logo" class="w-full h-full object-cover scale-[1.2]" /></div>
+        <p class="text-xs text-ink-muted font-medium">
+          © <span class="" id="current-year">2026</span> Rupam Nandan. Handcrafted with ink &amp; love in the studio.
+        </p>
+      </div>
+      <!-- Back to top button -->
+      <a class="press-btn px-4 py-2 rounded-lg bg-white border-2 border-ink shadow-stamp text-xs font-bold text-ink hover:bg-paper transition-colors flex items-center gap-2"
+        href="#">
+        <span class="">Back to top ↑</span>
+      </a>
+    </div>
+  </footer>
+  <!-- ========================================================= -->
+  <!-- JAVASCRIPT: DATA, LIGHTBOX, APPAREL LAB & ACTIONS -->
+  <!-- ========================================================= -->
+  <script>
+    // 18 Selected Works Data - Uploaded Portfolio
+    const projectsData = [
+      {
+        id: 1,
+        title: "Stay Strong Mountain Crest",
+        category: "tshirts",
+        categoryName: "T-Shirts",
+        aspect: "aspect-[4/5]",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCAqCan_kjBb1cLI8kh2-2Xa8FJQ3AVtw_UdEDoPhb8rCxhw9ysqTcBnN5kywytiEnoBcYYSo60cj55DCDflzPZYt0YGnozNVzEkfdxyvxx_fH3dmPnZcRcuVVe97HD1UAcCTDYF2WlyUGbiqdxh56C2w-aSpIrnHfiNy-iO3i0kc1-6PDXcCA844j_9Xn7oFS3ngpU1DhWZ933o_hKLX0RTC16ic2aeDT6B4u_RRtvv12VRzt0ErJJJg",
+        description: "Bold brushwork streetwear graphic on heavyweight combed cotton. Features dynamic sunburst halo, summit silhouette, and high-density screen print separations.",
+        tools: ["Waterbased Discharge", "Distressed Brush", "Adobe Illustrator"]
+      },
+      {
+        id: 2,
+        title: "Stay Focused Stay Hungry",
+        category: "tshirts",
+        categoryName: "T-Shirts",
+        aspect: "aspect-[4/5]",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDiBopqjSDMn87aMb313-fOjkK1mH3JKxL7URq3dvThpBxUl2IqEcg4wcnwDH0tye0uElqKLd-enY72hsALlurhecfiEqDlnf-eduIHjZkuRCG5K-RaAKjiBLNwrEy1lYkj4T3Dy36Htqug_yvo7_AigR6j8M_NPJOq2qOKzu7IxtIlKMUaR0Ken8ueF5GhMBKVg7n6P548K0jDfU2SYUsR7_bQAbIQyOB6xheQeGXOBTsIeJKM7LNKRw",
+        description: "High-energy expressive typography tee with textured brush splatters. 2-color spot print engineered with crisp white and mustard gold plastisol inks.",
+        tools: ["Plastisol Screenprint", "Spot Colors", "Type Treatment"]
+      },
+      {
+        id: 3,
+        title: "Momentum — Creative Graphics",
+        category: "tshirts",
+        categoryName: "T-Shirts",
+        aspect: "aspect-[4/5]",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUdrV62z7nHlBdUUc7E82IbG46auwv86MGz3d178dnoQySrBMPwthzSUXeBluiaPLrZBvXoq4gRkUBD5Xv331EEVZLiuUuFQ0G3jR6vV9B00l6mA6W-KlXEMRUKszvTiPUjEJzgAlbLBsB1pnqBqbL8IuogF5-HuwD8O_lStx90j2e2sbw5XglcBWOp8wn__FkgvZiKKYWTyjCIvAMivO3nkdramZQ1Fvk19ZNvX7NJ3QfyaCVOVpKMg",
+        description: "Multi-technique luxury streetwear graphic combining high-density 3D puff print ribs with reflective gold foil stamped geometric typography.",
+        tools: ["3D Puff Print", "Gold Foil Stamping", "Vector Geometry"]
+      },
+      {
+        id: 4,
+        title: "Take The Risk Streetwear",
+        category: "tshirts",
+        categoryName: "T-Shirts",
+        aspect: "aspect-[4/5]",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAO2__920q9DbmWa5KjZsFSMrZTh3BcMICl_XdELvG0-ueeiZgizwMmmJJg-sk50OnK3wiKq8wIAwmNzgdBP4Y4fuLVcSasV0ZjDSPWqSi81W-j7fXEW4gsLRP4d30xt6M6jvAdHahnX_pkTA6vtf5mTJonPTE6B7jjiIYruvpdwE_4YyizAwzP2uUCan0Yw8Yq1QIhaQ9Mtvv3VX03mpEER8BtW2mjoQo0EdNqyxe5GmSr_C8Tcc-uNQ",
+        description: "Brutalist typographic layout framed by industrial brackets and distress stencils. Produced with soft-hand waterbased ink on natural vintage white jersey.",
+        tools: ["Screenprint", "Brutalist Layout", "Distress Textures"]
+      },
+      {
+        id: 5,
+        title: "Dream Big Grind Bigger",
+        category: "tshirts",
+        categoryName: "T-Shirts",
+        aspect: "aspect-[4/5]",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCfPTV99CSMdUcKvvxCm-yCKBkP5fRdJCjC3LCWIw1ISghlPmWnU7x2KWnd30cy7gUbkO3V2rE-bE74ESQ7SbmVEUGc3pdxGKkc6hdaFwq_Dw10lQJmqHvi5uyxRQxOELoWDa9GIDREPAu226QZtmoKJmS9X2le-weh8IDEH56AFqPR8ai2Ph0yfuBmiiyb67M5zBM00eg-MBCoZnPd74-Tp5UsKvNJNvtaNTmGLJYQyczXfptzF4Pw3A",
+        description: "Oversized backprint artwork featuring interlocking geometric initials and architectural typographic quadrants for an urban streetwear capsule.",
+        tools: ["Oversized Print", "Pantone Match", "Adobe Illustrator"]
+      },
+      {
+        id: 6,
+        title: "Real Is Rare Multi-Texture",
+        category: "tshirts",
+        categoryName: "T-Shirts",
+        aspect: "aspect-[4/5]",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDOwRh41VW67wWsHsWSwxwDVYJTqevLiE2_hRdbYPZ0MBKOMstlRq5D_LK9p3FiCFt4abcNk2oPFTn-9FWcKi4mztiE3LefBQsTc_l2qcDsiV6RhOk-Yd5A3BwadholXWUEgm4WrMFjAoQSo0YvgYjfV395k8WSykD2SqYZcOEXL1gcqFpW5J6B-dG0PXj0TlQlI5f5_EENFcdBf74Ok4cGpnjatP_hGBkDbpdHL_yO_jYLrcc8PK4AeQ",
+        description: "Tactile multi-finish apparel piece utilizing tactile corduroy puff texture, metallic gold foil typography, and leatherette deboss finishes.",
+        tools: ["Puff Print", "Metallic Gold Foil", "Multi-Texture Print"]
+      },
+      {
+        id: 7,
+        title: "Cosmic Voyager Space Tee",
+        category: "tshirts",
+        categoryName: "T-Shirts",
+        aspect: "aspect-[4/5]",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBztsGKxuf_VXdYLxrm-qJ9nCCAYqT_23JAEI1kM-uEGbnSkTBeYCLlYgTFNyKN2GQW4CKxgtmYsOW4_kvc_TWnrJPfFenqW8ddFTGRAOnZ4lAMIo3iPOiJrEWU-PML2_l-TKzGeo49LFer02jrWv_UnQ_8aFfgcR6W3psa0U3Kn5z8kEtUvUUsgbcCUdtOoSwakURZZO7SLg0oW54RUX4bo5rMp9l35WS7Os0Xlux7A-u0OIc6AMb0WA",
+        description: "3-color pastel graphic apparel illustration pairing hand-sketched astronaut character art with vertical undulating typography and sleeve striping.",
+        tools: ["3-Color Screenprint", "Character Illustration", "Pastel Inks"]
+      },
+      {
+        id: 8,
+        title: "Call of the Sea — Sail Poster",
+        category: "posters",
+        categoryName: "Posters",
+        aspect: "aspect-[3/4]",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBH2-JkAPF-ZUexthkx4IHynuz6to-1iBem1ZwrSw7mCj5tiT9zORBT_uifC8QBP-Yntw6Tw8ONu20k5kRW6l7yetDqDYC1FqG_4RuowuT3RaqwYNqeyJJ5OUoOCrsjvYUBtqsbwuRFwsaUJ1LsbugIjmuMILFQbiAvS8xnusE5yrgwh1kcEkQPJ5Lr47aoMdzeMjbyQOwRMWdPs9nk6NdVMmVMAxqsu4hlRQM7iiCg_T2_avTFaKsM-Q",
+        description: "Classic nautical gig and art print poster on 300gsm cotton rag. Features expressive dry-brush lettering over meticulous nautical pen-and-ink engraving.",
+        tools: ["Screenprint Art", "Hand Lettering", "Cotton Rag Paper"]
+      },
+      {
+        id: 9,
+        title: "Skilled Sailor Apparel Art",
+        category: "posters",
+        categoryName: "Posters",
+        aspect: "aspect-[3/4]",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuB5kI661GdE58ebGhlDZTPQkUESdzoIFKmwdUnwydVJfhZe18iSQA__C6S3Se2k8IrndRJrSdK6LJQTph0f8Ui4jtpt1XARmxs4XSnvHEdJvujmIK3fJxcyU1NzkiImCN-lnAqgfQ0P6YEmO3V3Omvdm2MybLzcJCdF7FQYYMUzkmZKFZo5UvmwfmLPkbePyDnVaBvvPB1UIg6nW1-Ad4bOwYIylQ0qlDBt3OAp20rKdv54PL8Ne1IYBA",
+        description: "Large-format nautical broadsheet print showcasing tall-ship ocean gale linework, lighthouse crest badges, and layered atmospheric gradients.",
+        tools: ["Linework Engraving", "Spot Inks", "Screenprint Film"]
+      },
+      {
+        id: 10,
+        title: "Waves of Destiny Vintage Print",
+        category: "posters",
+        categoryName: "Posters",
+        aspect: "aspect-[3/4]",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDxaOJrEuuolu_mzTqVXZ9I_iN5P_kIgfZAsRsC06rgtBFGD5A1Jd9Vx4HQ-dNYcLTyABEsrrV3fViP_LA9PZh6OSfvCLoI61a3yhiazV2CGnkOl9To3kjlGKr-J8XSZAspDon3dwGpWgXdCAN7wvRcECok8rynWZex1wLaizmJ_g7LHeAjLjQfX8tYV3LpX-VN95Bym_KbMtU8MOomJTcNb8tlFAUbONCayH1KcY4D8psJJlxUD2nMTw",
+        description: "Minimalist maritime art poster printed with powdery slate blue and opaque white inks on uncoated archival French stock.",
+        tools: ["2-Color Riso", "Maritime Illustration", "French Paper"]
+      },
+      {
+        id: 11,
+        title: "Creative Nib Bulb Emblem",
+        category: "elements",
+        categoryName: "Design Elements",
+        aspect: "aspect-square",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuB751TSRBd6DH7qb3rLkWAyOzBuGOJx8XkLefkYijmgNPB00h3Y3DvvMoE-Rkut8ieZCYHtcfGbPKVg7F3P85KPTfa6XhHTZh5Yb5GmtYakFjNvCotsZfF4kMt-MGXan-PeriM2DdfsdpXwuophJuJ26EaoCah_dPmuLHQdWm8xMWgtGi7ZEt08kYWdo-xbKquXbUGMyLr-xH6SogyCBk6jLWsfz0ibJ3tbnJiXYS4NuVHqsBxykNLKaQ",
+        description: "Minimalist studio emblem uniting the fountain pen nib and filament lightbulb. Clean vector craft tailored for foil emboss badges and letterhead stamps.",
+        tools: ["Vector Emblem", "Brand Iconography", "Scalable SVG"]
+      },
+      {
+        id: 12,
+        title: "Bézier Pen Vector Craft Icon",
+        category: "elements",
+        categoryName: "Design Elements",
+        aspect: "aspect-square",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBwLgzFrBstFQqpjf6brZN9O2G-1EnMCyU47HNpBu-Tatt02psWJCr5v-UJfg2L7mxc-GT-pvElX0HZiSVTdLCh0N6l8LgDIxUG3_drsKZMnYh0yeis7hHuQboJA7cGKDqEpdM7yuTv9EiAAqabzG-fmSXEb3FTHm8d5oVb8uHTFX6WAJpSXzh5olspzU0DQxeott7k-C45hvZWdPuwv4-NLsKbalvpWaYWuaL3PVfhpeClR51rDIvvJQ",
+        description: "Iconic vector illustration honoring the craftsman's Bézier pen tool and control handles. Prepared for laser cutting, metal enamel pins, and brand stamps.",
+        tools: ["Bézier Curves", "Enamel Pin Art", "Vector Icon"]
+      },
+      {
+        id: 13,
+        title: "PATIENCE — Streetwear Statue",
+        category: "posters",
+        categoryName: "Posters",
+        aspect: "aspect-[4/5]",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDf6Y1_ZbZAA9h9DXFzPKLzLiCfZh8Dg4EEU870jzSgBX_F9ob8LM0d9WWjClOH3iGyi--nNOD4wy01SczRTPUDqSQkxWeWq6K-eE-_Yn0M-qT98V5PPLXTB84ZR1b4ou3eW4Ene0JyZ3mjveUGjR8QYvw3mKiEkBtkzF0-c1w3MdhoeLAMyL7SiYTJwbm7SE_R1k4md8PeiCr708y-Jq_SiJGTVUon-fIytgZ5ksG-l7QmsYoOmkqU1w",
+        description: "Streetwear aesthetic poster combining Greek classical statue bust, cracked marble textures, and bold gothic typography with purple riso ink accents.",
+        tools: ["Cracked Marble Riso Poster", "Gothic Typography", "Halftone Grain"]
+      },
+      {
+        id: 14,
+        title: "PEACE — Enjoy The Wind",
+        category: "posters",
+        categoryName: "Posters",
+        aspect: "aspect-[4/5]",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCZnn10aMkmk0-CvMeNZe9pa_qLQ8uzUpIUkMcPVFwZtYmPi25TTg0p6Yzi0gOyshdAWDnvv-N0u4YAPhLeN0dBZaXWoA446O23rqSoqUKaLigi_6rH45S_0I90FU8GpU4UfQ8s-azXzcvxjskfpPthwPXrBhUPCNefW0joyn55NhftUvSKRoOKjGOBZ7igGiWG88QKY_QwZK_7-Ckt55sTzp0vOo_IZtXECp0YHHFdNpExZ6XokWvyHg",
+        description: "Expressive dove and vivid red rose illustration with editorial serif typography on deep risograph black paper.",
+        tools: ["2-Color Riso Print", "Editorial Typography", "Botanical Art"]
+      },
+      {
+        id: 15,
+        title: "Coca-Cola Refreshment Poster",
+        category: "posters",
+        categoryName: "Posters",
+        aspect: "aspect-[4/5]",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAzIVV8syr1a448xvgIZMa0IFMMKPNbvdfa41gaD9F2u_QD5qwPgLdYFhPDoWtjXSYmBJt9g_7h1iF1FA8cosOOnQk3RDzKsapmiNIM0zTBxtstdIa1d1pFGfI6jSNH1jvAp2iY4vhRhOUo-NMxst3S1yYZfxK3laGC5gXzJJhKZHkNOAkqYP1vsKbhOZYlyaDcinuC2Rd3zol1k8eLxTc24GB68OvobbW0Qx3d-4y-JEZfnadAsqEgIw",
+        description: "Dynamic beverage splash commercial print poster with ice cubes, liquid refraction, and bold kinetic typography.",
+        tools: ["Commercial Print Poster", "Liquid Splash Vector", "Kinetic Type"]
+      },
+      {
+        id: 16,
+        title: "Hot & Delicious Burger Poster",
+        category: "posters",
+        categoryName: "Posters",
+        aspect: "aspect-[4/5]",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuALzxg2r70_Y6coVStNvYcwzWQe7GYkxJapGjPWCUe0DxKdKrEymZ66zeLaYCOVCEeSUpdeBQKETqmGh1GJQsFSVUhGW9SRc7oSa8ejX9r1bhIAw9QAVaurXMJRIjPj_rr6mbNvjiu1Jy2ths6-auNkFHnuv145-iSB6Xjqx7ZAUbV6v7N2FS-YhOTXfWTlZxvCWLQmoEeFyuQAXYgxQmJivWolvOaHJtYTiJwRNov9qe4N15OGT9bYsQ",
+        description: "Punchy fast-casual promotion poster featuring textured distressed typography and vibrant lime-green layout geometry.",
+        tools: ["Advertising Poster", "Distressed Texture", "Commercial Screen"]
+      },
+      {
+        id: 17,
+        title: "Audio Special Arrival Poster",
+        category: "posters",
+        categoryName: "Posters",
+        aspect: "aspect-[4/5]",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYxDzsAWvk8z7L-N6p7JdPKRLYlR8cctgNcSjI6GfGFBnog_gdb6fRH0w_aWS2uqdWZJOPwPNazVrv-3wHinePga-6CaPWh4ndtpWSIKyh3hP_VrosUrKl_s9Z8nx0n41BBVDT9cPZeHy4x3VhQEZuaaetXfNveffs-2DDtYYGuEWnPgJkg5004VOwNxxZnIJxL9MxLc24M85TmvOTKUHGjySYRAxehUBEzLNWwBCgXvTYNTMIBWWI1Q",
+        description: "Studio headphones launch poster using high-contrast black and marigold yellow split-tone geometry with promotional typography.",
+        tools: ["Promotional Event Poster", "Split-Tone Design", "Spot Yellow Ink"]
+      },
+      {
+        id: 18,
+        title: "Nike Big Sale Promo Poster",
+        category: "posters",
+        categoryName: "Posters",
+        aspect: "aspect-[4/5]",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYiP1X2JCxl673tSN5SellzBjMfj20ZxY6wf4jRx8fSv3KOGZp-W6m03IGtM01OdXubB0Spu4VWU51OeexQsl_FfQedchN42drRKEYAIGUwHwbuaOOqDnG5elTuKAA_e0exooQh1ifnDOgXFuX7C7J05MmAsAn9tTpaTp2KtjoFH5ak7QkcrL_EJNELiOp44QmBSDtJnp2TSIF8i-BAdL8wgrfOpBIf9todEzrUp23GRIEk9B_HHL30w",
+        description: "Sneaker promotion campaign poster with framed grid layout, deep crimson backdrop, and bold stencil typography.",
+        tools: ["Apparel Promo Poster", "Grid Framing", "Crimson Ink Wash"]
+      }
+    ];
+
+    // T-Shirt Artworks Data
+    const tshirtArtworks = [
+      {
+        title: "01 Botanica Riso",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAeWsjRNfb7yB5Eud-kcBziVui-mHquzUIHllvuEdoXngLJpzh_nRjQyCE9iM5GAOT8nJWUSrCq2WS8URMeFlEXQX4LFwbxuBvsXqRpL33sd-vnBYAeO8amZCCAzRoVXK5xEbLT-Y0DJ1Mp9UROSPs2PIpAyfS2_2HuJHmaQuR_YIG3ctPpSlp8dYJ_BvkQ8aDhyBnE5p21HeUC8_tOQAjdme5sACveOn3DfyfdvbqZ"
+      },
+      {
+        title: "02 Midnight Sun",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCi45nkfFjUeee-Q48mg0WISYrOPNwwnA2Te9WVLOi1S7Uu3rdIoR_yneMpd85uT_NlBZHJHAVJJ3Tq2Ub-HtgIAX7zUzE6LaMYq2Mw3lUFnlhb87jYZJEfDiwWbnF6W64kag1fJAl166xwVBnRqbk5p52Fp9pTMZWZJxjhqZVuM_VchOVBh94mBEDcbE-2NmyC0-2rhUeWsSa77TAg7CCFD6VNHy20ODTuxCsKgP_t"
+      },
+      {
+        title: "03 Echo Sound Poster",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBTFbZvnr0E4_MoWCb7px2Z9YUUfAhDa59prInWx147FxzYwwcGixJsPkhKSAi_S6thE_hsn1ZvKhc8vdNWtYJ34GJcywseK4pFaAbmcdPjb0Lz4XLOknm0tZxD0KJD3E5aAGdyK3wxctRRcfq7Fyrtq5VT7sHxKq_VxZI62e2-sgQAnv8wsw1A1w2EK4_hP5Tb-luJtZaA4qmEljJ1rbJHpRHmszVtqs0A1BQo990b"
+      },
+      {
+        title: "04 Acid Bauhaus",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCOMPZivdDhyqO61guANXegfFS7XRJq_mJYEOaPoqaOkjXIqqSamVmVYsQsfOu3FzAI_iQ4ERNR2TdMT7UXKjBup05PnlxpqjFUOG8WJ_Nw9hAeL6LReo8mYF_lNyGfiT2lR2zERR_nsvdaNV3LwzpwcN83VOhEBMvxqGY5kR_8cd4k6Y1xiSXfoJfo3smQnlxecJd5x7q7rKzfGxq_q5hQXVf0kIkYFZm9bZ0sNaoe"
+      }
+    ];
+
+    let currentLightboxIndex = 0;
+    let filteredProjects = [...projectsData];
+
+    // Initialize Everything on Load
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+      renderProjects('all');
+      setupFilterButtons();
+      setupLightboxControls();
+      setupMobileMenu();
+      setupScrollAnimations();
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    });
+
+    // Render Projects Cards
+    function renderProjects(category) {
+      const grid = document.getElementById('projects-grid');
+      grid.innerHTML = '';
+
+      filteredProjects = category === 'all'
+        ? projectsData
+        : projectsData.filter(p => p.category === category);
+
+      filteredProjects.forEach((project, index) => {
+        const card = document.createElement('div');
+        card.className = "press-card rounded-2xl bg-white border-2 border-ink shadow-flat overflow-hidden cursor-pointer group flex flex-col justify-between";
+        card.onclick = () => openLightbox(index);
+
+        card.innerHTML = `
+          <div class="${project.aspect} w-full overflow-hidden bg-paper relative border-b-2 border-ink flex items-center justify-center p-3">
+            <img src="${project.image}" alt="${project.title}" loading="lazy" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+            <div class="absolute top-3 left-3 px-2.5 py-1 rounded bg-white/95 border border-ink text-[11px] font-bold text-ink shadow-stamp z-10">
+              ${project.categoryName}
+            </div>
+          </div>
+          <div class="p-5 flex items-center justify-between">
+            <div class="pr-2">
+              <h3 class="font-serif font-bold text-lg text-ink group-hover:text-primary-blue transition-colors leading-snug line-clamp-1">
+                ${project.title}
+              </h3>
+              <p class="text-xs text-ink-muted mt-1 font-medium truncate">${project.tools[0]}</p>
+            </div>
+            <span class="w-8 h-8 rounded-full bg-paper border border-ink flex items-center justify-center text-ink group-hover:bg-accent-yellow transition-colors shadow-stamp flex-shrink-0">
+              <i data-lucide="eye" class="w-4 h-4"></i>
+            </span>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+
+      lucide.createIcons();
+    }
+
+    // Filter Buttons Interaction
+    function setupFilterButtons() {
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => {
+            b.classList.remove('bg-primary-blue', 'text-white', 'shadow-stamp');
+            b.classList.add('text-ink');
+          });
+          btn.classList.add('bg-primary-blue', 'text-white', 'shadow-stamp');
+          btn.classList.remove('text-ink');
+          renderProjects(btn.getAttribute('data-category'));
+        });
+      });
+    }
+
+    // Lightbox Functionality
+    function openLightbox(index) {
+      currentLightboxIndex = index;
+      updateLightbox();
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    function updateLightbox() {
+      const proj = filteredProjects[currentLightboxIndex];
+      if (!proj) return;
+
+      document.getElementById('lightbox-img').src = proj.image;
+      document.getElementById('lightbox-title').textContent = proj.title;
+      document.getElementById('lightbox-category').textContent = proj.categoryName;
+      document.getElementById('lightbox-desc').textContent = proj.description;
+      document.getElementById('lightbox-counter').textContent = `${currentLightboxIndex + 1} of ${filteredProjects.length}`;
+
+      const toolsBox = document.getElementById('lightbox-tools');
+      toolsBox.innerHTML = '';
+      proj.tools.forEach(tool => {
+        const chip = document.createElement('span');
+        chip.className = 'px-2.5 py-1 rounded bg-white border border-ink text-xs font-bold text-ink';
+        chip.textContent = tool;
+        toolsBox.appendChild(chip);
+      });
+    }
+
+    function setupLightboxControls() {
+      document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+      document.getElementById('lightbox-prev').addEventListener('click', () => {
+        currentLightboxIndex = (currentLightboxIndex - 1 + filteredProjects.length) % filteredProjects.length;
+        updateLightbox();
+      });
+      document.getElementById('lightbox-next').addEventListener('click', () => {
+        currentLightboxIndex = (currentLightboxIndex + 1) % filteredProjects.length;
+        updateLightbox();
+      });
+
+      // Close on backdrop click
+      document.getElementById('lightbox-modal').addEventListener('click', (e) => {
+        if (e.target.id === 'lightbox-modal') closeLightbox();
+      });
+
+      // Escape key to close, arrows to cycle
+      window.addEventListener('keydown', (e) => {
+        const modal = document.getElementById('lightbox-modal');
+        if (!modal.classList.contains('hidden')) {
+          if (e.key === 'Escape') closeLightbox();
+          if (e.key === 'ArrowLeft') {
+            currentLightboxIndex = (currentLightboxIndex - 1 + filteredProjects.length) % filteredProjects.length;
+            updateLightbox();
+          }
+          if (e.key === 'ArrowRight') {
+            currentLightboxIndex = (currentLightboxIndex + 1) % filteredProjects.length;
+            updateLightbox();
+          }
+        }
+      });
+    }
+
+    // T-Shirt Mockup Controls
+    function setTshirtColor(hex, name, mode, element) {
+      const svg = document.getElementById('tshirt-svg');
+      svg.setAttribute('fill', hex);
+      document.getElementById('selected-color-name').textContent = `${name} (${hex})`;
+
+      // Update swatch button active ring
+      document.querySelectorAll('.swatch-btn').forEach(btn => {
+        btn.classList.remove('ring-4', 'ring-primary-blue');
+      });
+      if (element) {
+        element.classList.add('ring-4', 'ring-primary-blue');
+      }
+
+      // Adjust blend mode based on fabric shade
+      const wrapper = document.getElementById('tshirt-artwork-wrapper');
+      if (mode === 'dark') {
+        wrapper.classList.remove('mix-blend-multiply');
+        wrapper.classList.add('mix-blend-screen');
+      } else {
+        wrapper.classList.remove('mix-blend-screen');
+        wrapper.classList.add('mix-blend-multiply');
+      }
+    }
+
+    function setTshirtArtwork(index, btnElement) {
+      const art = tshirtArtworks[index];
+      if (!art) return;
+
+      document.getElementById('tshirt-artwork-img').src = art.image;
+      document.getElementById('selected-artwork-title').textContent = art.title;
+
+      document.querySelectorAll('.design-thumb-btn').forEach(b => {
+        b.classList.remove('bg-paper', 'ring-2', 'ring-primary-blue');
+      });
+      if (btnElement) {
+        btnElement.classList.add('bg-paper', 'ring-2', 'ring-primary-blue');
+      }
+    }
+
+    // Copy Email to Clipboard helper
+    function copyEmailToClipboard() {
+      const email = 'rupamsworkspace@gmail.com';
+      navigator.clipboard.writeText(email).then(() => {
+        const badge = document.getElementById('copy-feedback-badge');
+        badge.textContent = 'Copied! ✓';
+        badge.classList.remove('bg-paper');
+        badge.classList.add('bg-accent-yellow');
+        setTimeout(() => {
+          badge.textContent = 'Copy';
+          badge.classList.remove('bg-accent-yellow');
+          badge.classList.add('bg-paper');
+        }, 2500);
+      });
+    }
+
+    // Responsive Mobile Menu
+    function setupMobileMenu() {
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+
+      document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.add('hidden');
+        });
+      });
+    }
+
+    // Scroll Animations
+    function setupScrollAnimations() {
+      const elements = document.querySelectorAll('section > div, .press-card, h1, h2');
+      elements.forEach(el => el.classList.add('fade-up-element'));
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -50px 0px' });
+
+      elements.forEach(el => observer.observe(el));
+    }
+
+    </script>
+
+
+
+  <!-- Auth Modal -->
+  <div id="auth-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-ink/40 backdrop-blur-sm">
+    <div class="bg-paper-light border-2 border-ink shadow-flat-xl rounded-2xl p-6 sm:p-8 w-full max-w-md relative fade-up-element visible">
+      <button id="auth-close" class="absolute top-4 right-4 p-2 rounded-lg hover:bg-paper transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-ink"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+      
+      <h3 id="auth-title" class="font-serif font-bold text-2xl text-ink mb-2">Sign In</h3>
+      <p id="auth-subtitle" class="text-ink-muted text-sm mb-6">Welcome back to Print Studio.</p>
+
+      <form id="auth-form" class="space-y-4">
+        <div id="auth-name-group" class="hidden">
+          <label class="block text-sm font-bold text-ink mb-1" for="auth-name">Name</label>
+          <input type="text" id="auth-name" class="w-full bg-white border-2 border-ink rounded-lg px-4 py-2.5 text-ink focus:outline-none focus:ring-4 focus:ring-primary-blue/20 transition-all font-medium" placeholder="Your Name">
+        </div>
+        <div>
+          <label class="block text-sm font-bold text-ink mb-1" for="auth-email">Email</label>
+          <input type="email" id="auth-email" class="w-full bg-white border-2 border-ink rounded-lg px-4 py-2.5 text-ink focus:outline-none focus:ring-4 focus:ring-primary-blue/20 transition-all font-medium" placeholder="hello@example.com" required>
+        </div>
+        <div>
+          <label class="block text-sm font-bold text-ink mb-1" for="auth-password">Password</label>
+          <input type="password" id="auth-password" class="w-full bg-white border-2 border-ink rounded-lg px-4 py-2.5 text-ink focus:outline-none focus:ring-4 focus:ring-primary-blue/20 transition-all font-medium" placeholder="••••••••" required>
+        </div>
+
+        <div id="auth-error" class="hidden text-red-600 text-sm font-bold bg-red-50 p-3 rounded-lg border border-red-200"></div>
+
+        <button type="submit" id="auth-submit-btn" class="press-btn w-full py-3 rounded-lg bg-primary-blue text-white font-bold text-base border-2 border-ink shadow-flat mt-2">
+          Sign In
+        </button>
+      </form>
+
+      <div class="mt-4 flex items-center justify-between">
+        <hr class="w-full border-ink/20">
+        <span class="px-2 text-xs font-bold text-ink-muted uppercase">OR</span>
+        <hr class="w-full border-ink/20">
+      </div>
+
+      <button id="btn-google-signin" class="press-btn mt-4 w-full py-3 rounded-lg bg-white text-ink font-bold text-base border-2 border-ink shadow-flat flex items-center justify-center gap-2 hover:bg-paper-light">
+        <svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><g transform="matrix(1, 0, 0, 1, 27.009001, -39.238998)"><path fill="#4285F4" d="M -3.264 51.509 C -3.264 50.719 -3.334 49.969 -3.454 49.239 L -14.754 49.239 L -14.754 53.749 L -8.284 53.749 C -8.574 55.229 -9.424 56.479 -10.684 57.329 L -10.684 60.329 L -6.824 60.329 C -4.564 58.239 -3.264 55.159 -3.264 51.509 Z"/><path fill="#34A853" d="M -14.754 63.239 C -11.514 63.239 -8.804 62.159 -6.824 60.329 L -10.684 57.329 C -11.764 58.049 -13.134 58.489 -14.754 58.489 C -17.884 58.489 -20.534 56.379 -21.484 53.529 L -25.464 53.529 L -25.464 56.619 C -23.494 60.539 -19.444 63.239 -14.754 63.239 Z"/><path fill="#FBBC05" d="M -21.484 53.529 C -21.734 52.809 -21.864 52.039 -21.864 51.239 C -21.864 50.439 -21.724 49.669 -21.484 48.949 L -21.484 45.859 L -25.464 45.859 C -26.284 47.479 -26.754 49.299 -26.754 51.239 C -26.754 53.179 -26.284 54.999 -25.464 56.619 L -21.484 53.529 Z"/><path fill="#EA4335" d="M -14.754 43.989 C -12.984 43.989 -11.404 44.599 -10.154 45.789 L -6.734 42.369 C -8.804 40.429 -11.514 39.239 -14.754 39.239 C -19.444 39.239 -23.494 41.939 -25.464 45.859 L -21.484 48.949 C -20.534 46.099 -17.884 43.989 -14.754 43.989 Z"/></g></svg>
+        Continue with Google
+      </button>
+
+      <p class="mt-6 text-center text-sm font-semibold text-ink-muted">
+        <span id="auth-toggle-text">Don't have an account?</span>
+        <button id="auth-toggle-btn" class="text-primary-blue hover:underline ml-1">Sign Up</button>
+      </p>
+    </div>
+  </div>
+
+  
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+    import { getFirestore, doc, setDoc, updateDoc, arrayUnion, collection, addDoc, query, where, onSnapshot, serverTimestamp, Timestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyA9pv0qb6fHH3kQu_2XZBf5QN6rQLylaKo",
+      authDomain: "rupams-workspace.firebaseapp.com",
+      projectId: "rupams-workspace",
+      storageBucket: "rupams-workspace.firebasestorage.app",
+      messagingSenderId: "123228341614",
+      appId: "1:123228341614:web:e35270601f68296b766d7f"
+    };
+
+    let app, auth, db;
+    try {
+      app = initializeApp(firebaseConfig);
+      auth = getAuth(app);
+      db = getFirestore(app);
+      console.log("Firebase initialized successfully");
+    } catch (error) {
+      console.error("Firebase initialization failed:", error);
+    }
+
+    // Wrap the rest in a try/catch so it never breaks the page
+    try {
+      if (auth && db) {
+        let currentUser = null;
+        let isSignUpMode = false;
+        let pendingInquirySubmit = false;
+        let unsubscribeInquiries = null;
+        let unsubscribeAdmin = null;
+        let allAdminInquiries = [];
+
+
+        window.openAuthModal = function() {
+          const authError = document.getElementById('auth-error');
+          const authModal = document.getElementById('auth-modal');
+          if (authError) authError.classList.add('hidden');
+          if (authModal) authModal.classList.remove('hidden');
+        };
+
+        window.closeAuthModal = function() {
+          const authModal = document.getElementById('auth-modal');
+          if (authModal) authModal.classList.add('hidden');
+          pendingInquirySubmit = false;
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+          // DOM Elements
+          const authModal = document.getElementById('auth-modal');
+          const authClose = document.getElementById('auth-close');
+          const authTitle = document.getElementById('auth-title');
+          const authSubtitle = document.getElementById('auth-subtitle');
+          const authForm = document.getElementById('auth-form');
+          const authNameGroup = document.getElementById('auth-name-group');
+          const authName = document.getElementById('auth-name');
+          const authEmail = document.getElementById('auth-email');
+          const authPassword = document.getElementById('auth-password');
+          const authError = document.getElementById('auth-error');
+          const authSubmitBtn = document.getElementById('auth-submit-btn');
+          const btnGoogleSignin = document.getElementById('btn-google-signin');
+          const authToggleText = document.getElementById('auth-toggle-text');
+          const authToggleBtn = document.getElementById('auth-toggle-btn');
+
+          const desktopAuthContainer = document.getElementById('desktop-auth-container');
+          const desktopUserContainer = document.getElementById('desktop-user-container');
+          const navUserName = document.getElementById('nav-user-name');
+          const btnSignIn = document.getElementById('btn-sign-in');
+          const btnSignOut = document.getElementById('btn-sign-out');
+
+          const mobileAuthContainer = document.getElementById('mobile-auth-container');
+          const mobileUserContainer = document.getElementById('mobile-user-container');
+          const mobileUserName = document.getElementById('mobile-user-name');
+          const mobileBtnSignIn = document.getElementById('mobile-btn-sign-in');
+          const mobileBtnSignOut = document.getElementById('mobile-btn-sign-out');
+
+          const contactForm = document.getElementById('contact-form');
+          const inquiryName = document.getElementById('form-name');
+          const inquiryEmail = document.getElementById('form-email');
+          const formSubmitBtn = document.getElementById('form-submit-btn');
+          const formSuccess = document.getElementById('form-success');
+
+          const inquiriesUnauth = document.getElementById('inquiries-unauth');
+          const inquiriesAuth = document.getElementById('inquiries-auth');
+          const inquiriesEmpty = document.getElementById('inquiries-empty');
+          const inquiriesList = document.getElementById('inquiries-list');
+          const adminUnauth = document.getElementById('admin-unauth');
+          const adminAuth = document.getElementById('admin-auth');
+          const adminList = document.getElementById('admin-list');
+          const adminSearch = document.getElementById('admin-search');
+          const adminFilter = document.getElementById('admin-filter');
+          const adminLoading = document.getElementById('admin-loading');
+          const adminError = document.getElementById('admin-error');
+          const adminEmpty = document.getElementById('admin-empty');
+          const navAdminLink = document.getElementById('nav-admin-link');
+          const mobileNavAdminLink = document.getElementById('mobile-nav-admin-link');
+
+          const btnInquiriesSignin = document.getElementById('btn-inquiries-signin');
+
+          if (authClose) authClose.addEventListener('click', window.closeAuthModal);
+          if (btnSignIn) btnSignIn.addEventListener('click', window.openAuthModal);
+          
+          if (adminSearch) {
+            adminSearch.addEventListener('input', renderAdminList);
+          }
+          if (adminFilter) {
+            adminFilter.addEventListener('change', renderAdminList);
+          }
+
+          if (btnInquiriesSignin) btnInquiriesSignin.addEventListener('click', window.openAuthModal);
+          
+          if (mobileBtnSignIn) {
+            mobileBtnSignIn.addEventListener('click', () => {
+              const menu = document.getElementById('mobile-menu');
+              if (menu) menu.classList.add('hidden');
+              window.openAuthModal();
+            });
+          }
+
+          if (authToggleBtn) {
+            authToggleBtn.addEventListener('click', (e) => {
+              e.preventDefault();
+              isSignUpMode = !isSignUpMode;
+              if (authError) authError.classList.add('hidden');
+              if (isSignUpMode) {
+                if (authTitle) authTitle.textContent = 'Sign Up';
+                if (authSubtitle) authSubtitle.textContent = 'Join Print Studio to track your projects.';
+                if (authNameGroup) authNameGroup.classList.remove('hidden');
+                if (authName) authName.required = true;
+                if (authSubmitBtn) authSubmitBtn.textContent = 'Sign Up';
+                if (authToggleText) authToggleText.textContent = 'Already have an account?';
+                if (authToggleBtn) authToggleBtn.textContent = 'Sign In';
+              } else {
+                if (authTitle) authTitle.textContent = 'Sign In';
+                if (authSubtitle) authSubtitle.textContent = 'Welcome back to Print Studio.';
+                if (authNameGroup) authNameGroup.classList.add('hidden');
+                if (authName) authName.required = false;
+                if (authSubmitBtn) authSubmitBtn.textContent = 'Sign In';
+                if (authToggleText) authToggleText.textContent = "Don't have an account?";
+                if (authToggleBtn) authToggleBtn.textContent = 'Sign Up';
+              }
+            });
+          }
+
+          function showError(msg) {
+            if (authError) {
+              authError.textContent = msg;
+              authError.classList.remove('hidden');
+            } else {
+              alert(msg);
+            }
+          }
+
+          if (authForm) {
+            authForm.addEventListener('submit', async (e) => {
+              e.preventDefault();
+              const email = authEmail ? authEmail.value : '';
+              const password = authPassword ? authPassword.value : '';
+              if (authSubmitBtn) authSubmitBtn.disabled = true;
+
+              try {
+                if (isSignUpMode) {
+                  const name = authName ? authName.value : '';
+                  const userCred = await createUserWithEmailAndPassword(auth, email, password);
+                  await setDoc(doc(db, 'users', userCred.user.uid), {
+                    name, email, createdAt: serverTimestamp()
+                  });
+                } else {
+                  await signInWithEmailAndPassword(auth, email, password);
+                }
+                window.closeAuthModal();
+                if (pendingInquirySubmit) submitInquiry();
+              } catch (err) {
+                showError(err.message);
+              } finally {
+                if (authSubmitBtn) authSubmitBtn.disabled = false;
+              }
+            });
+          }
+
+          if (btnGoogleSignin) {
+            btnGoogleSignin.addEventListener('click', async () => {
+              const provider = new GoogleAuthProvider();
+              try {
+                const userCred = await signInWithPopup(auth, provider);
+                await setDoc(doc(db, 'users', userCred.user.uid), {
+                  name: userCred.user.displayName || 'User',
+                  email: userCred.user.email,
+                  createdAt: serverTimestamp()
+                }, { merge: true });
+                
+                window.closeAuthModal();
+                if (pendingInquirySubmit) submitInquiry();
+              } catch (err) {
+                showError(err.message);
+              }
+            });
+          }
+
+          if (btnSignOut) {
+            btnSignOut.addEventListener('click', () => signOut(auth));
+          }
+          if (mobileBtnSignOut) {
+            mobileBtnSignOut.addEventListener('click', () => {
+              const menu = document.getElementById('mobile-menu');
+              if (menu) menu.classList.add('hidden');
+              signOut(auth);
+            });
+          }
+
+          onAuthStateChanged(auth, (user) => {
+            currentUser = user;
+            if (user) {
+              if (desktopAuthContainer) desktopAuthContainer.classList.add('hidden');
+              if (desktopUserContainer) {
+                desktopUserContainer.classList.remove('hidden');
+                desktopUserContainer.classList.add('flex');
+              }
+              if (navUserName) navUserName.textContent = user.displayName || (user.email ? user.email.split('@')[0] : 'User');
+              
+              if (mobileAuthContainer) mobileAuthContainer.classList.add('hidden');
+              if (mobileUserContainer) {
+                mobileUserContainer.classList.remove('hidden');
+                mobileUserContainer.classList.add('flex');
+              }
+              if (mobileUserName) mobileUserName.textContent = user.displayName || (user.email ? user.email.split('@')[0] : 'User');
+
+              if (inquiriesUnauth) inquiriesUnauth.classList.add('hidden');
+              if (inquiriesAuth) inquiriesAuth.classList.remove('hidden');
+
+              if (inquiryName && inquiryEmail) {
+                inquiryName.value = user.displayName || '';
+                inquiryEmail.value = user.email || '';
+              }
+
+              loadMyInquiries(user.uid);
+
+            if (user.email === 'rupamnandan239@gmail.com') {
+              if (navAdminLink) navAdminLink.classList.remove('hidden');
+              if (mobileNavAdminLink) mobileNavAdminLink.classList.remove('hidden');
+              if (adminUnauth) adminUnauth.classList.add('hidden');
+              if (adminAuth) adminAuth.classList.remove('hidden');
+              loadAdminInquiries();
+            } else {
+              if (navAdminLink) navAdminLink.classList.add('hidden');
+              if (mobileNavAdminLink) mobileNavAdminLink.classList.add('hidden');
+              if (adminUnauth) adminUnauth.classList.remove('hidden');
+              if (adminAuth) adminAuth.classList.add('hidden');
+              if (unsubscribeAdmin) {
+                unsubscribeAdmin();
+                unsubscribeAdmin = null;
+              }
+            }
+
+            } else {
+              if (desktopAuthContainer) desktopAuthContainer.classList.remove('hidden');
+              if (desktopUserContainer) {
+                desktopUserContainer.classList.add('hidden');
+                desktopUserContainer.classList.remove('flex');
+              }
+              
+              if (mobileAuthContainer) mobileAuthContainer.classList.remove('hidden');
+              if (mobileUserContainer) {
+                mobileUserContainer.classList.add('hidden');
+                mobileUserContainer.classList.remove('flex');
+              }
+
+              if (inquiriesUnauth) inquiriesUnauth.classList.remove('hidden');
+              if (inquiriesAuth) inquiriesAuth.classList.add('hidden');
+
+              if (inquiryName && inquiryEmail) {
+                inquiryName.value = '';
+                inquiryEmail.value = '';
+              }
+
+              if (unsubscribeInquiries) {
+                unsubscribeInquiries();
+                unsubscribeInquiries = null;
+              }
+
+              if (navAdminLink) navAdminLink.classList.add('hidden');
+              if (mobileNavAdminLink) mobileNavAdminLink.classList.add('hidden');
+              if (adminUnauth) adminUnauth.classList.remove('hidden');
+              if (adminAuth) adminAuth.classList.add('hidden');
+              if (unsubscribeAdmin) {
+                unsubscribeAdmin();
+                unsubscribeAdmin = null;
+              }
+
+            }
+          });
+
+          if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+              e.preventDefault();
+              if (!currentUser) {
+                pendingInquirySubmit = true;
+                window.openAuthModal();
+                return;
+              }
+              submitInquiry();
+            });
+          }
+
+          async function submitInquiry() {
+            const name = inquiryName ? inquiryName.value : '';
+            const email = inquiryEmail ? inquiryEmail.value : '';
+            const projectTypeEl = document.getElementById('form-category');
+            const detailsEl = document.getElementById('form-message');
+            const projectType = projectTypeEl ? projectTypeEl.value : '';
+            const details = detailsEl ? detailsEl.value : '';
+
+            if (formSubmitBtn) {
+              formSubmitBtn.disabled = true;
+              formSubmitBtn.innerHTML = '<span>Transmitting Inquiry...</span>';
+            }
+
+            try {
+              await addDoc(collection(db, 'inquiries'), {
+                userId: currentUser.uid,
+                name,
+                email,
+                projectType,
+                details,
+                status: 'Pending',
+                createdAt: serverTimestamp(),
+                messages: []
+              });
+              
+              if (formSubmitBtn) formSubmitBtn.innerHTML = '<span>Inquiry Sent!</span>';
+              if (formSuccess) formSuccess.classList.remove('hidden');
+              if (contactForm) contactForm.reset();
+              
+              setTimeout(() => {
+                if (formSuccess) formSuccess.classList.add('hidden');
+                if (formSubmitBtn) {
+                  formSubmitBtn.innerHTML = '<span>Send Project Inquiry</span>';
+                  formSubmitBtn.disabled = false;
+                }
+              }, 4000);
+            } catch (err) {
+              alert("Error submitting inquiry: " + err.message);
+              if (formSubmitBtn) {
+                formSubmitBtn.disabled = false;
+                formSubmitBtn.innerHTML = '<span>Send Project Inquiry</span>';
+              }
+            }
+          }
+
+          
+          function loadAdminInquiries() {
+            if (adminLoading) adminLoading.classList.remove('hidden');
+            if (adminError) adminError.classList.add('hidden');
+            if (adminList) adminList.innerHTML = '';
+            
+            const q = query(collection(db, 'inquiries'));
+            unsubscribeAdmin = onSnapshot(q, (snapshot) => {
+              if (adminLoading) adminLoading.classList.add('hidden');
+              allAdminInquiries = [];
+              snapshot.forEach(docSnap => {
+                allAdminInquiries.push({ id: docSnap.id, data: docSnap.data() });
+              });
+              
+              allAdminInquiries.sort((a, b) => {
+                const timeA = a.data.createdAt ? (typeof a.data.createdAt.toMillis === 'function' ? a.data.createdAt.toMillis() : 0) : 0;
+                const timeB = b.data.createdAt ? (typeof b.data.createdAt.toMillis === 'function' ? b.data.createdAt.toMillis() : 0) : 0;
+                return timeB - timeA;
+              });
+              
+              renderAdminList();
+            }, (err) => {
+              if (adminLoading) adminLoading.classList.add('hidden');
+              if (adminError) {
+                adminError.classList.remove('hidden');
+                adminError.textContent = 'Error: ' + err.message;
+              }
+            });
+          }
+
+          function renderAdminList() {
+            if (!adminList) return;
+            adminList.innerHTML = '';
+            
+            const filterTerm = adminFilter ? adminFilter.value : 'All';
+            const searchTerm = adminSearch ? adminSearch.value.toLowerCase() : '';
+            
+            const filtered = allAdminInquiries.filter(item => {
+              const data = item.data;
+              if (filterTerm !== 'All' && data.status !== filterTerm) return false;
+              if (searchTerm) {
+                const name = (data.name || '').toLowerCase();
+                const email = (data.email || '').toLowerCase();
+                if (!name.includes(searchTerm) && !email.includes(searchTerm)) return false;
+              }
+              return true;
+            });
+            
+            if (filtered.length === 0) {
+              if (adminEmpty) adminEmpty.classList.remove('hidden');
+            } else {
+              if (adminEmpty) adminEmpty.classList.add('hidden');
+              filtered.forEach(item => {
+                const card = createAdminCard(item.id, item.data);
+                adminList.appendChild(card);
+              });
+            }
+          }
+
+
+
+          function createAdminCard(id, data) {
+            const dateStr = data.createdAt ? (typeof data.createdAt.toDate === 'function' ? data.createdAt.toDate().toLocaleDateString() : 'Just now') : 'Unknown';
+            
+            const div = document.createElement('div');
+            div.className = "bg-white border-2 border-ink rounded-xl p-6 shadow-flat flex flex-col gap-4";
+            
+            let badgeColor = "bg-paper-light";
+            if (data.status === 'Pending') badgeColor = "bg-accent-yellow";
+            if (data.status === 'In Review') badgeColor = "bg-blue-300";
+            if (data.status === 'Quote Sent') badgeColor = "bg-purple-300";
+            if (data.status === 'In Progress') badgeColor = "bg-primary-blue text-white";
+            if (data.status === 'Completed') badgeColor = "bg-green-300";
+
+            let messagesHtml = '';
+            if (data.messages && data.messages.length > 0) {
+              messagesHtml += '<div class="mt-4 border-t border-ink/20 pt-4">';
+              messagesHtml += '<h4 class="font-bold text-sm text-ink mb-3">Messages & Updates</h4>';
+              
+                const sortedMsgs = [...data.messages].sort((a, b) => {
+                  const timeA = a.createdAt ? (typeof a.createdAt.toMillis === 'function' ? a.createdAt.toMillis() : new Date(a.createdAt).getTime()) : 0;
+                  const timeB = b.createdAt ? (typeof b.createdAt.toMillis === 'function' ? b.createdAt.toMillis() : new Date(b.createdAt).getTime()) : 0;
+                  return timeA - timeB;
+                });
+                sortedMsgs.forEach(msg => {
+                  const isClient = msg.from !== 'admin';
+                  const align = isClient ? 'bg-white' : 'bg-paper-light';
+                  const sender = isClient ? 'Me' : 'Admin (Rupam)';
+                  const dateObj = msg.createdAt ? (typeof msg.createdAt.toDate === 'function' ? msg.createdAt.toDate() : new Date(msg.createdAt)) : null;
+                  const dateStr = (dateObj && !isNaN(dateObj)) ? dateObj.toLocaleString() : (msg.date || '');
+                  
+                  messagesHtml += '<div class="mb-3 ' + align + ' p-3 rounded border border-ink/20">';
+                  messagesHtml += '<p class="text-xs font-bold text-ink-muted mb-1">' + dateStr + ' - ' + sender + '</p>';
+                  messagesHtml += '<p class="text-sm text-ink">' + msg.text + '</p>';
+                  messagesHtml += '</div>';
+                });
+              messagesHtml += '</div>';
+            }
+
+            div.innerHTML = `
+              <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                <div>
+                  <h3 class="font-serif font-bold text-xl text-ink">${data.projectType || 'Project'}</h3>
+                  <p class="text-sm text-ink-muted mt-1 font-bold">${data.name} (${data.email}) - ${dateStr}</p>
+                </div>
+                
+                <div class="flex items-center gap-2">
+                  <select id="admin-status-${id}" class="text-xs font-bold px-2 py-1 border-2 border-ink rounded-lg bg-paper focus:outline-none cursor-pointer">
+                    <option value="Pending" ${data.status === 'Pending' ? 'selected' : ''}>Pending</option>
+                    <option value="In Review" ${data.status === 'In Review' ? 'selected' : ''}>In Review</option>
+                    <option value="Quote Sent" ${data.status === 'Quote Sent' ? 'selected' : ''}>Quote Sent</option>
+                    <option value="In Progress" ${data.status === 'In Progress' ? 'selected' : ''}>In Progress</option>
+                    <option value="Completed" ${data.status === 'Completed' ? 'selected' : ''}>Completed</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="text-ink text-sm bg-paper p-4 rounded-lg border border-ink/10 whitespace-pre-wrap">${data.details || 'No details provided.'}</div>
+              
+              ${messagesHtml}
+              
+              <div class="mt-2 flex gap-2">
+                <input type="text" id="admin-reply-${id}" placeholder="Type a reply to the client..." class="flex-1 px-3 py-2 text-sm border-2 border-ink rounded-lg focus:outline-none">
+                <button id="admin-reply-btn-${id}" class="px-4 py-2 bg-primary-blue text-white font-bold text-sm rounded-lg border-2 border-ink shadow-stamp hover:translate-y-px hover:shadow-none transition-all">Send Reply</button>
+              </div>
+            `;
+            
+            // Wait for innerHTML to parse, but since we haven't appended div yet, we can't getElementById.
+            // We use querySelector inside the div.
+            const statusSelect = div.querySelector('#admin-status-' + id);
+            if (statusSelect) {
+              statusSelect.addEventListener('change', async (e) => {
+                try {
+                  await updateDoc(doc(db, 'inquiries', id), { status: e.target.value });
+                } catch(err) {
+                  alert('Error updating status: ' + err.message);
+                }
+              });
+            }
+
+            const replyBtn = div.querySelector('#admin-reply-btn-' + id);
+            const replyInput = div.querySelector('#admin-reply-' + id);
+            if (replyBtn && replyInput) {
+              replyBtn.addEventListener('click', async () => {
+                if (!replyInput.value.trim()) return;
+                replyBtn.disabled = true;
+                replyBtn.textContent = 'Sending...';
+                try {
+                  await updateDoc(doc(db, 'inquiries', id), {
+                    messages: arrayUnion({
+                    from: 'admin',
+                    text: replyInput.value.trim(),
+                    createdAt: new Date().toISOString()
+                  }),
+                  updatedAt: serverTimestamp()
+                  });
+                  replyInput.value = '';
+                } catch(err) {
+                  alert('Error sending reply: ' + err.message);
+                } finally {
+                replyBtn.disabled = false;
+                replyBtn.textContent = 'Reply sent!';
+                replyBtn.classList.add('bg-green-500', 'border-green-700');
+                setTimeout(() => {
+                  if (document.body.contains(replyBtn)) {
+                    replyBtn.textContent = 'Send Reply';
+                    replyBtn.classList.remove('bg-green-500', 'border-green-700');
+                  }
+                }, 2000);
+              }
+              });
+            }
+
+            return div;
+          }
+
+          function loadMyInquiries(uid) {
+            const q = query(collection(db, 'inquiries'), where('userId', '==', uid));
+            unsubscribeInquiries = onSnapshot(q, (snapshot) => {
+              if (!inquiriesList) return;
+              inquiriesList.innerHTML = '';
+              
+              if (snapshot.empty) {
+                if (inquiriesEmpty) inquiriesEmpty.classList.remove('hidden');
+                return;
+              }
+              
+              if (inquiriesEmpty) inquiriesEmpty.classList.add('hidden');
+              
+              const inquiries = [];
+              snapshot.forEach(docSnap => {
+                inquiries.push({ id: docSnap.id, data: docSnap.data() });
+              });
+              
+              inquiries.sort((a, b) => {
+                const timeA = a.data.createdAt ? (typeof a.data.createdAt.toMillis === 'function' ? a.data.createdAt.toMillis() : 0) : 0;
+                const timeB = b.data.createdAt ? (typeof b.data.createdAt.toMillis === 'function' ? b.data.createdAt.toMillis() : 0) : 0;
+                return timeB - timeA;
+              });
+              
+              inquiries.forEach(item => {
+                const card = createInquiryCard(item.id, item.data);
+                inquiriesList.appendChild(card);
+              });
+            }, (err) => {
+              console.error("Error loading inquiries: ", err);
+              if (inquiriesList) {
+                inquiriesList.innerHTML = '<div class="p-4 bg-red-50 text-red-600 rounded-lg border border-red-200">Error: ' + err.message + '</div>';
+              }
+            });
+          }
+
+          function createInquiryCard(id, data) {
+            const dateStr = data.createdAt ? data.createdAt.toDate().toLocaleDateString() : 'Just now';
+            
+            const div = document.createElement('div');
+            div.className = "bg-white border-2 border-ink rounded-xl p-6 shadow-flat";
+            
+            let badgeColor = "bg-paper-light";
+            if (data.status === 'Pending') badgeColor = "bg-accent-yellow";
+            if (data.status === 'In Review') badgeColor = "bg-blue-300";
+            if (data.status === 'Quote Sent') badgeColor = "bg-purple-300";
+            if (data.status === 'In Progress') badgeColor = "bg-primary-blue text-white";
+            if (data.status === 'Completed') badgeColor = "bg-green-300";
+
+            const statuses = ['Pending', 'In Review', 'Quote Sent', 'In Progress', 'Completed'];
+            let currentIndex = statuses.indexOf(data.status);
+            if (currentIndex === -1) currentIndex = 0;
+            
+            let timelineHtml = '<div class="flex items-center gap-2 mb-6 flex-wrap">';
+            statuses.forEach((s, i) => {
+              const isPast = i <= currentIndex;
+              const isCurrent = i === currentIndex;
+              const bgClass = isCurrent ? "bg-primary-blue text-white" : (isPast ? "bg-ink text-white" : "bg-paper text-ink-muted border-ink/30");
+              timelineHtml += '<span class="px-2 py-1 text-[10px] font-bold uppercase rounded border ' + bgClass + ' border-ink">' + s + '</span>';
+              if (i < statuses.length - 1) {
+                timelineHtml += '<span class="text-ink-muted text-xs hidden sm:inline">→</span>';
+              }
+            });
+            timelineHtml += '</div>';
+            
+            let messagesHtml = '';
+            if (data.messages && data.messages.length > 0) {
+              messagesHtml += '<div class="mt-6 border-t border-ink/20 pt-4">';
+              messagesHtml += '<h4 class="font-bold text-sm text-ink mb-3">Messages & Updates</h4>';
+              
+            const sortedMsgs = [...data.messages].sort((a, b) => {
+              const timeA = a.createdAt ? (typeof a.createdAt.toMillis === 'function' ? a.createdAt.toMillis() : new Date(a.createdAt).getTime()) : 0;
+              const timeB = b.createdAt ? (typeof b.createdAt.toMillis === 'function' ? b.createdAt.toMillis() : new Date(b.createdAt).getTime()) : 0;
+              return timeA - timeB;
+            });
+            sortedMsgs.forEach(msg => {
+              const isClient = msg.from !== 'admin';
+              const align = isClient ? 'bg-white' : 'bg-paper-light';
+              const sender = isClient ? (data.name || 'Client') : 'Admin (Rupam)';
+              const dateObj = msg.createdAt ? (typeof msg.createdAt.toDate === 'function' ? msg.createdAt.toDate() : new Date(msg.createdAt)) : null;
+              const msgDateStr = (dateObj && !isNaN(dateObj)) ? dateObj.toLocaleString() : (msg.date || '');
+              
+              messagesHtml += '<div class="mb-3 ' + align + ' p-3 rounded border border-ink/20">';
+              messagesHtml += '<p class="text-xs font-bold text-ink-muted mb-1">' + msgDateStr + ' - ' + sender + '</p>';
+              messagesHtml += '<p class="text-sm text-ink">' + msg.text + '</p>';
+              messagesHtml += '</div>';
+            });
+              messagesHtml += '</div>';
+            }
+
+            div.innerHTML = `
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <h3 class="font-serif font-bold text-xl text-ink">${data.projectType}</h3>
+                  <p class="text-xs text-ink-muted mt-1 font-bold">Submitted ${dateStr}</p>
+                </div>
+                <span class="px-3 py-1 rounded-full text-xs font-bold border border-ink ${badgeColor} shadow-stamp">${data.status}</span>
+              </div>
+              ${timelineHtml}
+              <p class="text-ink text-sm bg-paper p-4 rounded-lg border border-ink/10 mb-2 whitespace-pre-wrap">${data.details}</p>
+              ${messagesHtml}
+            `;
+            return div;
+          }
+        });
+      }
+    } catch (e) {
+      console.error("Firebase App UI initialization failed:", e);
+    }
+  </script>
+
+  <script type="module">
+    import { getApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+    import { getFirestore, doc, updateDoc, arrayUnion, collection, query, onSnapshot, serverTimestamp, Timestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    document.addEventListener('DOMContentLoaded', () => {
+      let app, auth, db;
+      try {
+        app = getApp();
+        auth = getAuth(app);
+        db = getFirestore(app);
+      } catch (e) {
+        console.error("Admin module could not initialize Firebase:", e);
+        return;
+      }
+
+      try {
+        let unsubscribeAdmin = null;
+        let allAdminInquiries = [];
+
+        const adminSection = document.getElementById('admin');
+        const adminAuth = document.getElementById('admin-auth');
+        const adminList = document.getElementById('admin-list');
+        const adminSearch = document.getElementById('admin-search');
+        const adminFilter = document.getElementById('admin-filter');
+        const adminLoading = document.getElementById('admin-loading');
+        const adminError = document.getElementById('admin-error');
+        const adminEmpty = document.getElementById('admin-empty');
+        const navAdminLink = document.getElementById('nav-admin-link');
+        const mobileNavAdminLink = document.getElementById('mobile-nav-admin-link');
+
+        if (adminSearch) adminSearch.addEventListener('input', renderAdminList);
+        if (adminFilter) adminFilter.addEventListener('change', renderAdminList);
+
+        onAuthStateChanged(auth, (user) => {
+          if (user && user.email === 'rupamnandan239@gmail.com') {
+            if (adminSection) adminSection.classList.remove('hidden');
+            if (navAdminLink) navAdminLink.classList.remove('hidden');
+            if (mobileNavAdminLink) mobileNavAdminLink.classList.remove('hidden');
+            if (adminAuth) adminAuth.classList.remove('hidden');
+            loadAdminInquiries();
+          } else {
+            if (adminSection) adminSection.classList.add('hidden');
+            if (navAdminLink) navAdminLink.classList.add('hidden');
+            if (mobileNavAdminLink) mobileNavAdminLink.classList.add('hidden');
+            if (adminAuth) adminAuth.classList.add('hidden');
+            if (unsubscribeAdmin) {
+              unsubscribeAdmin();
+              unsubscribeAdmin = null;
+            }
+          }
+        });
+
+        function loadAdminInquiries() {
+          if (adminLoading) adminLoading.classList.remove('hidden');
+          if (adminError) adminError.classList.add('hidden');
+          if (adminList) adminList.innerHTML = '';
+          
+          const q = query(collection(db, 'inquiries'));
+          unsubscribeAdmin = onSnapshot(q, (snapshot) => {
+            if (adminLoading) adminLoading.classList.add('hidden');
+            allAdminInquiries = [];
+            snapshot.forEach(docSnap => {
+              allAdminInquiries.push({ id: docSnap.id, data: docSnap.data() });
+            });
+            
+            allAdminInquiries.sort((a, b) => {
+              const timeA = a.data.createdAt ? (typeof a.data.createdAt.toMillis === 'function' ? a.data.createdAt.toMillis() : 0) : 0;
+              const timeB = b.data.createdAt ? (typeof b.data.createdAt.toMillis === 'function' ? b.data.createdAt.toMillis() : 0) : 0;
+              return timeB - timeA;
+            });
+            
+            renderAdminList();
+          }, (err) => {
+            if (adminLoading) adminLoading.classList.add('hidden');
+            if (adminError) {
+              adminError.classList.remove('hidden');
+              adminError.textContent = 'Error: ' + err.message;
+            }
+          });
+        }
+
+        function renderAdminList() {
+          if (!adminList) return;
+          adminList.innerHTML = '';
+          
+          const filterTerm = adminFilter ? adminFilter.value : 'All';
+          const searchTerm = adminSearch ? adminSearch.value.toLowerCase() : '';
+          
+          const filtered = allAdminInquiries.filter(item => {
+            const data = item.data;
+            if (filterTerm !== 'All' && data.status !== filterTerm) return false;
+            if (searchTerm) {
+              const name = (data.name || '').toLowerCase();
+              const email = (data.email || '').toLowerCase();
+              if (!name.includes(searchTerm) && !email.includes(searchTerm)) return false;
+            }
+            return true;
+          });
+          
+          if (filtered.length === 0) {
+            if (adminEmpty) adminEmpty.classList.remove('hidden');
+          } else {
+            if (adminEmpty) adminEmpty.classList.add('hidden');
+            filtered.forEach(item => {
+              const card = createAdminCard(item.id, item.data);
+              adminList.appendChild(card);
+            });
+          }
+        }
+
+        function createAdminCard(id, data) {
+          const dateStr = data.createdAt ? (typeof data.createdAt.toDate === 'function' ? data.createdAt.toDate().toLocaleDateString() : 'Just now') : 'Unknown';
+          
+          const div = document.createElement('div');
+          div.className = "bg-white border-2 border-ink rounded-xl p-6 shadow-flat flex flex-col gap-4";
+          
+          let badgeColor = "bg-paper-light";
+          if (data.status === 'Pending') badgeColor = "bg-accent-yellow";
+          if (data.status === 'In Review') badgeColor = "bg-blue-300";
+          if (data.status === 'Quote Sent') badgeColor = "bg-purple-300";
+          if (data.status === 'In Progress') badgeColor = "bg-primary-blue text-white";
+          if (data.status === 'Completed') badgeColor = "bg-green-300";
+
+          let messagesHtml = '';
+          if (data.messages && data.messages.length > 0) {
+            messagesHtml += '<div class="mt-4 border-t border-ink/20 pt-4">';
+            messagesHtml += '<h4 class="font-bold text-sm text-ink mb-3">Messages & Updates</h4>';
+            const sortedMsgs = [...data.messages].sort((a, b) => {
+              const timeA = a.createdAt ? (typeof a.createdAt.toMillis === 'function' ? a.createdAt.toMillis() : new Date(a.createdAt).getTime()) : 0;
+              const timeB = b.createdAt ? (typeof b.createdAt.toMillis === 'function' ? b.createdAt.toMillis() : new Date(b.createdAt).getTime()) : 0;
+              return timeA - timeB;
+            });
+            sortedMsgs.forEach(msg => {
+              const isClient = msg.from !== 'admin';
+              const align = isClient ? 'bg-white' : 'bg-paper-light';
+              const sender = isClient ? (data.name || 'Client') : 'Admin (Rupam)';
+              const dateObj = msg.createdAt ? (typeof msg.createdAt.toDate === 'function' ? msg.createdAt.toDate() : new Date(msg.createdAt)) : null;
+              const msgDateStr = (dateObj && !isNaN(dateObj)) ? dateObj.toLocaleString() : (msg.date || '');
+              messagesHtml += '<div class="mb-3 ' + align + ' p-3 rounded border border-ink/20">';
+              messagesHtml += '<p class="text-xs font-bold text-ink-muted mb-1">' + msgDateStr + ' - ' + sender + '</p>';
+              messagesHtml += '<p class="text-sm text-ink">' + msg.text + '</p>';
+              messagesHtml += '</div>';
+            });
+            messagesHtml += '</div>';
+          }
+
+          const h3Project = data.projectType || 'Project';
+          const pClient = data.name + ' (' + data.email + ') - ' + dateStr;
+          const statusVal = data.status || 'Pending';
+          
+          div.innerHTML = '<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">' +
+            '<div>' +
+              '<h3 class="font-serif font-bold text-xl text-ink">' + h3Project + '</h3>' +
+              '<p class="text-sm text-ink-muted mt-1 font-bold">' + pClient + '</p>' +
+            '</div>' +
+            '<div class="flex items-center gap-2">' +
+              '<select id="admin-status-' + id + '" class="text-xs font-bold px-2 py-1 border-2 border-ink rounded-lg bg-paper focus:outline-none cursor-pointer">' +
+                '<option value="Pending" ' + (statusVal === 'Pending' ? 'selected' : '') + '>Pending</option>' +
+                '<option value="In Review" ' + (statusVal === 'In Review' ? 'selected' : '') + '>In Review</option>' +
+                '<option value="Quote Sent" ' + (statusVal === 'Quote Sent' ? 'selected' : '') + '>Quote Sent</option>' +
+                '<option value="In Progress" ' + (statusVal === 'In Progress' ? 'selected' : '') + '>In Progress</option>' +
+                '<option value="Completed" ' + (statusVal === 'Completed' ? 'selected' : '') + '>Completed</option>' +
+              '</select>' +
+            '</div>' +
+          '</div>' +
+          '<div class="text-ink text-sm bg-paper p-4 rounded-lg border border-ink/10 whitespace-pre-wrap">' + (data.details || 'No details provided.') + '</div>' +
+          messagesHtml +
+          '<div class="mt-2 flex gap-2">' +
+            '<input type="text" id="admin-reply-' + id + '" placeholder="Type a reply to the client..." class="flex-1 px-3 py-2 text-sm border-2 border-ink rounded-lg focus:outline-none">' +
+            '<button id="admin-reply-btn-' + id + '" class="px-4 py-2 bg-primary-blue text-white font-bold text-sm rounded-lg border-2 border-ink shadow-stamp hover:translate-y-px hover:shadow-none transition-all">Send Reply</button>' +
+          '</div>';
+
+          const statusSelect = div.querySelector('#admin-status-' + id);
+          if (statusSelect) {
+            statusSelect.addEventListener('change', async (e) => {
+              try {
+                await updateDoc(doc(db, 'inquiries', id), { status: e.target.value });
+              } catch(err) {
+                alert('Error updating status: ' + err.message);
+              }
+            });
+          }
+
+          const replyBtn = div.querySelector('#admin-reply-btn-' + id);
+          const replyInput = div.querySelector('#admin-reply-' + id);
+          if (replyBtn && replyInput) {
+            replyBtn.addEventListener('click', async () => {
+              if (!replyInput.value.trim()) return;
+              replyBtn.disabled = true;
+              replyBtn.textContent = 'Sending...';
+              try {
+                await updateDoc(doc(db, 'inquiries', id), {
+                  messages: arrayUnion({
+                    from: 'admin',
+                    text: replyInput.value.trim(),
+                    date: new Date().toLocaleDateString(),
+                    createdAt: Timestamp.now()
+                  })
+                });
+                replyInput.value = '';
+              } catch(err) {
+                alert('Error sending reply: ' + err.message);
+              } finally {
+                replyBtn.disabled = false;
+                replyBtn.textContent = 'Send Reply';
+              }
+            });
+          }
+
+          return div;
+        }
+
+      } catch (e) {
+        console.error("Admin App UI initialization failed:", e);
+      }
+    });
+  </script>
+
+</body>
+
+</html>
